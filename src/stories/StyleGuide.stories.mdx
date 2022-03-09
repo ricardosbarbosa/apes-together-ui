@@ -1,0 +1,91 @@
+import { Meta } from '@storybook/addon-docs';
+import Code from './assets/code-brackets.svg';
+import Colors from './assets/colors.svg';
+import Comments from './assets/comments.svg';
+import Direction from './assets/direction.svg';
+import Flow from './assets/flow.svg';
+import Plugin from './assets/plugin.svg';
+import Repo from './assets/repo.svg';
+import StackAlt from './assets/stackalt.svg';
+
+<Meta title="0. Style Guide/Colors" />
+
+<style>{`
+  .h1 {
+    margin-bottom: 30px;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .row {
+    display: flex;
+    gap: 20px;
+  }
+  .rectangle {
+    height: 300px;
+    min-width: 157px;
+    background: #7E4A9B;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    color: #FFFFFF;
+    padding: 20px;
+    font-family: Neue Montreal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+`}</style>
+
+<h1  className="h1">Colors</h1>
+
+<div className="col">
+  <div className="row">
+    <div className="rectangle" style={{ backgroundColor: "#7E4A9B"}}>
+      <span>purple-pleasure</span>
+      <span>#7E4A9B</span>
+    </div>
+    <div className="rectangle" style={{ backgroundColor: "#E2778A"}}>
+      <span>creamy-coral</span>
+      <span>#E2778A</span>
+    </div>
+    <div className="rectangle" style={{ backgroundColor: "#78CB8F"}}>
+      <span>serengeti-green</span>
+      <span>#78CB8F</span>
+    </div>
+  </div>
+  
+  <div className="row">
+    <div className="rectangle" style={{ backgroundColor: "#303030" }}>
+      <span>off-black</span>
+      <span>#303030</span>
+    </div>
+    <div className="rectangle" style={{ backgroundColor: "#888888" }}>
+      <span>argent</span>
+      <span>#888888</span>
+    </div>
+    <div className="rectangle" style={{ backgroundColor: "#B1B1B1" }}>
+      <span>palladium</span>
+      <span>#B1B1B1</span>
+    </div>
+    <div className="rectangle" style={{ backgroundColor: "#DFDFDF", color: "black" }}>
+      <span>kingly-cloud</span>
+      <span>#DFDFDF</span>
+    </div>
+    <div className="rectangle" style={{ backgroundColor: "#F2F2F2", color: "black" }}>
+      <span>bleached-silk</span>
+      <span>#F2F2F2</span>
+    </div>
+    <div className="rectangle" style={{ backgroundColor: "#FFFFFF", color: "black", border: "1px solid #B1B1B1", boxSizing: "border-box", borderRadius: "10px"}}>
+      <span>white</span>
+      <span>#FFFFFF</span>
+    </div>
+  </div>
+</div>
