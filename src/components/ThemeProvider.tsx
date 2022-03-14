@@ -3,12 +3,13 @@ import React from 'react'
 import { ButtonProps, createTheme, Theme, ThemeProvider as MuiThemeProvider} from '@mui/material';
 // When using TypeScript 4.x and above
 import type {} from '@mui/lab/themeAugmentation';
+import zIndex from '@mui/material/styles/zIndex';
 
 
 
 const theme = createTheme({
   shape: {
-    borderRadius: '12px'
+    borderRadius: '12px',
   },
   direction: 'rtl',
   palette: {
@@ -49,6 +50,7 @@ const theme = createTheme({
   },
   components: {
 
+   
     MuiDivider: {
       styleOverrides: {
         root: {
@@ -220,39 +222,44 @@ const theme = createTheme({
 
       },
     },
-    
-    // MuiInputBase: {
-    //   styleOverrides: {
-    //     root: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
-    //       borderRadius: "12px",
-    //     }),
-        
-    //   }
-    // },
+    MuiSelect: {
+      styleOverrides: {
+        disabled: {
+          cursor: 'not-allowed'
+        },
+        select: ({theme, ownerState} :{theme: Theme, ownerState: ButtonProps}) => ({
+          border: `2px solid #DFDFDF`,
+          minWidth: '252px',
+          // height: '52px',
+          padding: '13px 15px 12px 15px',
+          fontSize: '15px',
+          '&:hover:enabled': {
+            background: 'white',
+            border: `2px solid ${theme.palette.primary.dark}`,
+            // border: '2px solid #B1B1B1'
+          },
+          '&:focus': {
+            boxSizing: 'border-box',
+            boxShadow: `0px 0px 0px 4px ${theme.palette.primary.light}`,
+            border: `2px solid ${theme.palette.primary.main}`,
+          },
+          '&:disabled': {
+            border: '2px solid #DFDFDF',
+            opacity: '0.4',
+            background: 'transparent',
+            cursor: 'not-allowed'
+          },
+        }),   
+      }
+    },
     MuiOutlinedInput: {
       styleOverrides: {
-
-        input: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
-          borderRadius: "12px",
-          // border: '2px solid red',
-          boxSizing: 'border-box',
-              // @ts-ignore
-            // boxShadow: `0px 0px 0px 4px ${theme.palette.primary.main}`,
-              // @ts-ignore
-          border: `2px solid  ${theme.palette.primary.main}`,
-          '&:hover': {
-            boxSizing: 'border-box',
-
-            border: `2px solid ${theme.palette.primary.dark}`,
-          }
-        }),
-
-        root: {
-          borderRadius: "12px",
+        notchedOutline: {
           border: 'none'
         }
       }
-    },
+    }
+    
   },
 });
 
