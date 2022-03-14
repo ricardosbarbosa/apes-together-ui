@@ -48,6 +48,15 @@ const theme = createTheme({
     }
   },
   components: {
+
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          borderColor: '#F2F2F2',
+          borderWidth: "2px"
+        }
+      }
+    },
    
     MuiIconButton: {
       defaultProps: {
