@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { ButtonProps, createTheme, Theme, ThemeProvider as MuiThemeProvider} from '@mui/material';
+import { ButtonProps, createTheme, OutlinedInput, Theme, ThemeProvider as MuiThemeProvider} from '@mui/material';
 // When using TypeScript 4.x and above
 import type {} from '@mui/lab/themeAugmentation';
 
@@ -8,7 +8,7 @@ import type {} from '@mui/lab/themeAugmentation';
 
 const theme = createTheme({
   shape: {
-    borderRadius: '12px'
+    borderRadius: '12px',
   },
   direction: 'rtl',
   palette: {
@@ -24,7 +24,10 @@ const theme = createTheme({
       // light: 'rgba(126, 74, 155, 0.12)'
     },
     secondary: {
-      main: '#edf2ff',
+      main: '#E2778A',
+      dark: '#e24e69',
+      light: '#e4b0ba',
+      contrastText: '#FFFFFF'
     },
     success: {
       dark: '#285c2a',
@@ -209,6 +212,38 @@ const theme = createTheme({
       },
     },
     
+    // MuiInputBase: {
+    //   styleOverrides: {
+    //     root: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
+    //       borderRadius: "12px",
+    //     }),
+        
+    //   }
+    // },
+    MuiOutlinedInput: {
+      styleOverrides: {
+
+        input: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
+          borderRadius: "12px",
+          // border: '2px solid red',
+          boxSizing: 'border-box',
+              // @ts-ignore
+            // boxShadow: `0px 0px 0px 4px ${theme.palette.primary.main}`,
+              // @ts-ignore
+          border: `2px solid  ${theme.palette.primary.main}`,
+          '&:hover': {
+            boxSizing: 'border-box',
+
+            border: `2px solid ${theme.palette.primary.dark}`,
+          }
+        }),
+
+        root: {
+          borderRadius: "12px",
+          border: 'none'
+        }
+      }
+    },
   },
 });
 
