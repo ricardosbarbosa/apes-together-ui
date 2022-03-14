@@ -9,9 +9,7 @@ export default {
   title: 'Components/TextField',
   component: TextField,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
   decorators: [
     (Story) => (
       <ThemeProvider>
@@ -22,4 +20,4 @@ export default {
 } as ComponentMeta<typeof TextField>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof TextField> = (args) => <TextField> Olá Mundo</TextField>;
+export const Template: ComponentStory<typeof TextField> = () => <TextField color='primary' defaultValue={"Olá Mundo"} />;

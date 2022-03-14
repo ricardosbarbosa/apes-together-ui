@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 
 import ThemeProvider from '../components/ThemeProvider';
 import { Grid, IconButton, Typography } from '@mui/material';
-import { Alarm, Fingerprint, PaperPlane, ShoppingCart, Trash } from 'phosphor-react';
+import { Alarm, ArrowUpRight, Fingerprint, PaperPlane, Plus, ShoppingCart, Trash } from 'phosphor-react';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -189,3 +189,48 @@ export const Template: ComponentStory<typeof Button> = () => (
     </Grid>
   </Grid>
 )
+
+const Playground: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+Playground.args = {
+  children: 'Button',
+}
+
+export const Primary = Playground.bind({});
+Primary.args = {
+  children: 'Primary',
+  variant: 'contained'
+};
+export const Secondary = Playground.bind({});
+Secondary.args = {
+  children: 'Secondary',
+  variant: 'outlined',
+  color: 'secondary'
+};
+export const RightIcon = Playground.bind({});
+RightIcon.args = {
+  endIcon: <ArrowUpRight size={22} />,
+  variant: 'outlined',
+  children: 'secondary'
+};
+export const LeftIcon = Playground.bind({});
+LeftIcon.args = {
+  startIcon: <Plus size={22} />,
+  variant: 'outlined',
+  children: 'secondary'
+};
+
+export const Block = Playground.bind({});
+Block.args = {
+  children: 'Secondary',
+  variant: 'outlined',
+  fullWidth: true
+};
+
+const PlaygroundIconButton: ComponentStory<typeof Button> = (args) => <IconButton {...args} />;
+PlaygroundIconButton.args = {}
+
+export const Icon = PlaygroundIconButton.bind({});
+Icon.args = {
+  variant: 'outlined',
+  children: <Trash />,
+};
