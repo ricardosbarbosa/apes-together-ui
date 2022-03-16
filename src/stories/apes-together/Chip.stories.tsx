@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ThemeProvider from '../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider';
 import { Chip, Stack, Avatar } from '@mui/material';
 import { Check, CheckCircle, FaceMask, Prohibit, TrashSimple } from 'phosphor-react';
 

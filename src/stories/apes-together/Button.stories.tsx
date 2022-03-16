@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from '@mui/material/Button';
 
-import ThemeProvider from '../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider';
 import { Grid, IconButton, Typography } from '@mui/material';
 import { Alarm, ArrowUpRight, Fingerprint, PaperPlane, Plus, ShoppingCart, Trash } from 'phosphor-react';
 

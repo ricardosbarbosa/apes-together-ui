@@ -1,13 +1,13 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ThemeProvider from '../components/ThemeProvider';
-import Switch from '../components/Switch';
+import { Checkbox } from '@mui/material';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Switch',
-  component: Switch,
+  title: 'Others/inputs/Checkbox',
+  component: Checkbox,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -19,7 +19,7 @@ export default {
       </ThemeProvider>
     ),
   ],
-} as ComponentMeta<typeof Switch>;
+} as ComponentMeta<typeof Checkbox>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Switch> = (args) => <Switch />;
+export const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox />;

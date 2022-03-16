@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ThemeProvider from '../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider';
 import { MenuItem, Select, Stack } from '@mui/material';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

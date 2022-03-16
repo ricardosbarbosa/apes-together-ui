@@ -1,11 +1,8 @@
 
 import React from 'react'
-import { ButtonProps, createTheme, Theme, ThemeProvider as MuiThemeProvider} from '@mui/material';
+import { ButtonProps, createTheme, Theme, ThemeProvider as MuiThemeProvider } from '@mui/material';
 // When using TypeScript 4.x and above
-import type {} from '@mui/lab/themeAugmentation';
-import zIndex from '@mui/material/styles/zIndex';
-
-
+import type { } from '@mui/lab/themeAugmentation';
 
 const theme = createTheme({
   shape: {
@@ -50,7 +47,7 @@ const theme = createTheme({
   },
   components: {
 
-   
+
     MuiDivider: {
       styleOverrides: {
         root: {
@@ -59,14 +56,14 @@ const theme = createTheme({
         }
       }
     },
-   
+
     MuiIconButton: {
       defaultProps: {
         disableFocusRipple: true
       },
       styleOverrides: {
         root: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => {
-          console.log({theme, ownerState})
+          console.log({ theme, ownerState })
           return ({
             fontFamily: 'aktiv-grotesk, sans-serif',
             fontStyle: 'normal',
@@ -102,11 +99,6 @@ const theme = createTheme({
               // border: '2px solid #B1B1B1',
               background: 'transparent'
             },
-            '&:disabled': {
-              border: '2px solid #DFDFDF',
-              opacity: '0.4',
-              background: 'transparent'
-            },
           })
         },
         sizeLarge: {
@@ -132,8 +124,8 @@ const theme = createTheme({
         disableFocusRipple: true,
       },
       styleOverrides: {
-        
-        root: ({theme, ownerState} :{theme: Theme, ownerState: ButtonProps}) => {
+
+        root: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => {
           return ({
             fontFamily: 'aktiv-grotesk, sans-serif',
             fontStyle: 'normal',
@@ -163,9 +155,9 @@ const theme = createTheme({
         },
         containedPrimary: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
           // border: `2px solid ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark}`,
-          
+
           // border: 'none',
-          color: theme.palette.common.white  + ' !important',
+          color: theme.palette.common.white + ' !important',
           '&:disabled': {
             border: `2px solid ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].main}  !important`,
             background: theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].main,
@@ -183,16 +175,16 @@ const theme = createTheme({
             color: theme.palette.common.white + ' !important',
           }
         }),
-        
-        outlined: ({theme, ownerState} :{theme: Theme, ownerState: ButtonProps}) => ({
+
+        outlined: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
           '&:hover': {
-            background: 'transparent',  
+            background: 'transparent',
             border: `2px solid ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark}`,
             // border: '2px solid #B1B1B1'
             color: theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark
           },
         }),
-        text: ({theme, ownerState} :{theme: Theme, ownerState: ButtonProps}) => ({
+        text: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
           border: `2px solid ${theme.palette.common.white}`,
           '&:hover': {
             background: 'white',
@@ -200,8 +192,8 @@ const theme = createTheme({
             // border: '2px solid #B1B1B1'
           },
           '&:disabled': {
-              border: `none`,
-            },
+            border: `none`,
+          },
         }),
         sizeLarge: {
           padding: '0 116px',
@@ -218,16 +210,13 @@ const theme = createTheme({
           fontSize: '14px',
           height: '44px'
         },
-       
+
 
       },
     },
     MuiSelect: {
       styleOverrides: {
-        disabled: {
-          cursor: 'not-allowed'
-        },
-        select: ({theme, ownerState} :{theme: Theme, ownerState: ButtonProps}) => ({
+        select: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
           border: `2px solid #DFDFDF`,
           minWidth: '252px',
           // height: '52px',
@@ -243,13 +232,13 @@ const theme = createTheme({
             boxShadow: `0px 0px 0px 4px ${theme.palette.primary.light}`,
             border: `2px solid ${theme.palette.primary.main}`,
           },
-          '&:disabled': {
+          "&.Mui-disabled": {
             border: '2px solid #DFDFDF',
             opacity: '0.4',
             background: 'transparent',
             cursor: 'not-allowed'
           },
-        }),   
+        }),
       }
     },
     MuiOutlinedInput: {
@@ -258,8 +247,55 @@ const theme = createTheme({
           border: 'none'
         }
       }
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        input: {
+          '&::placeholder': {
+            textOverflow: 'ellipsis !important',
+            color: '#888888',
+          },
+        },
+        root: {
+          backgroundColor: '#F2F2F2',
+          color: '#303030',
+          // height: '52px',
+          border: '2px solid white',
+
+          '&:hover': {
+            border: '2px solid #7E4A9B',
+            boxSizing: 'border-box'
+          },
+          '&:hover.Mui-disabled': {
+            border: '2px solid white',
+          },
+        },
+      }
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          ".MuiInputBase-multiline": {
+            height: 'auto'
+          },
+          "& .MuiOutlinedInput-root.Mui-focused": {
+            border: '2px solid #7E4A9B',
+            boxSizing: 'border-box',
+            boxShadow: '0px 0px 0px 4px rgba(126, 74, 155, 0.12)',
+            borderRadius: '12px'
+          },
+          "& .MuiOutlinedInput-root.Mui-error": {
+            border: '2px solid #E2778A',
+          },
+          "& .MuiOutlinedInput-root.Mui-focused.Mui-error": {
+            border: '2px solid #E2778A',
+            boxSizing: 'border-box',
+            boxShadow: '0px 0px 0px 4px rgba(226, 119, 138, 0.16);',
+            borderRadius: '12px'
+          },
+        }
+      }
     }
-    
   },
 });
 
