@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Divider } from '@mui/material';
 import ThemeProvider from '../../components/ThemeProvider';
@@ -15,14 +14,14 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Divider>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Divider> = (args) => <Divider />;
+const Template: ComponentStory<typeof Divider> = () => <Divider />;
 Template.args = {}
 
 export const Thin = Template.bind({});

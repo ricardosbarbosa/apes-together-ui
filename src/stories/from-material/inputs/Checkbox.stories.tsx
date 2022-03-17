@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Checkbox } from '@mui/material';
 import ThemeProvider from '../../../components/ThemeProvider';
@@ -15,11 +14,11 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Checkbox>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Checkbox> = (args) => <Checkbox />;
+export const Template: ComponentStory<typeof Checkbox> = () => <Checkbox />;

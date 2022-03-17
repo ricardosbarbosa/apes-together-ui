@@ -16,17 +16,17 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Slider>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Slider> = (args) => {
+export const Template: ComponentStory<typeof Slider> = () => {
   const [value, setValue] = React.useState<number>(30);
 
-  const handleChange = (event: Event, newValue: number | number[]) => {
+  const handleChange = (_: Event, newValue: number | number[]) => {
     setValue(newValue as number);
   };
 

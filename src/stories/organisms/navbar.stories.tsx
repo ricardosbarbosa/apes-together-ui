@@ -22,19 +22,23 @@ export default {
 export const Apes: ComponentStory<typeof AppBar> = () => {
 
   return (
-    <NavBar menus={[
-      {
-        label: 'Storybook',
-        href: '/iframe.html'
-      },
-      {
-        label: 'Dashboard',
-        href: '/dashboard'
-      },
-      {
-        label: "Lists You've Joined",
-        href: '/joined-list'
-      }
-    ]} />
+    <NavBar
+      onChange={console.log}
+      initialHref='/iframe.html'
+      menus={[
+        {
+          label: 'Storybook',
+          href: '/iframe.html'
+        },
+        {
+          label: 'Dashboard',
+          href: '/dashboard'
+        },
+        {
+          label: "Lists You've Joined",
+          href: '/joined-list'
+        }
+      ]}
+    />
   )
 }

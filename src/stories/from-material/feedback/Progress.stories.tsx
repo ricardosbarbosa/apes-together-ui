@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Box, CircularProgress, LinearProgress, Stack } from '@mui/material';
 import ThemeProvider from '../../../components/ThemeProvider';
@@ -23,7 +22,7 @@ export default {
 
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof CircularProgress> = (args) => {
+export const Template: ComponentStory<typeof CircularProgress> = () => {
   return (
     <Stack direction={'column'} spacing={2}>
       <Stack sx={{ color: 'grey.500' }} spacing={2} direction="row">

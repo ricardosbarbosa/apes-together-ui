@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button, ButtonGroup, Stack } from '@mui/material';
 import ThemeProvider from '../../../components/ThemeProvider';
@@ -15,16 +14,16 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof ButtonGroup>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof ButtonGroup> = (args) => (
+export const Template: ComponentStory<typeof ButtonGroup> = () => (
   <Stack direction='column' spacing={2} alignItems='center'>
-     <ButtonGroup variant="contained" aria-label="outlined primary button group">
+    <ButtonGroup variant="contained" aria-label="outlined primary button group">
       <Button>One</Button>
       <Button>Two</Button>
       <Button>Three</Button>
@@ -40,5 +39,5 @@ export const Template: ComponentStory<typeof ButtonGroup> = (args) => (
       <Button>Three</Button>
     </ButtonGroup>
   </Stack>
- 
+
 );

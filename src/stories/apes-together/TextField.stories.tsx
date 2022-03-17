@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TextField, Stack } from '@mui/material';
 import ThemeProvider from '../../components/ThemeProvider';

@@ -184,7 +184,7 @@ const theme = createTheme({
             color: theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark
           },
         }),
-        text: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
+        text: ({ theme }: { theme: Theme, ownerState: ButtonProps }) => ({
           border: `2px solid ${theme.palette.common.white}`,
           '&:hover': {
             background: 'white',

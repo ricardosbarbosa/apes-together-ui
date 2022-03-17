@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Box, Button, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Stack } from '@mui/material';
+import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Stack } from '@mui/material';
 import ThemeProvider from '../../../components/ThemeProvider';
 import { pink } from '@mui/material/colors';
 
@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
@@ -26,7 +26,7 @@ export default {
 
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof RadioGroup> = (args) => {
+export const Template: ComponentStory<typeof RadioGroup> = () => {
   const [selectedValue, setSelectedValue] = React.useState('a');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -85,7 +85,7 @@ export const Template: ComponentStory<typeof RadioGroup> = (args) => {
               color: pink[600],
             },
           }}
-          />
+        />
       </Stack>
       <Stack direction={'row'} spacing='2'>
         <Radio {...controlProps('a')} size="small" />
@@ -99,8 +99,8 @@ export const Template: ComponentStory<typeof RadioGroup> = (args) => {
           }}
         />
       </Stack>
-      
+
     </Stack>
- 
+
   )
 };

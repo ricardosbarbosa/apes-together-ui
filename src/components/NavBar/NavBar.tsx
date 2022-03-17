@@ -1,28 +1,34 @@
 import { TabContext, TabList } from '@mui/lab'
 import { AppBar, Toolbar, Container, Box, Tab } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import OsirisLogo from '../OsirisLogo/OsirisLogo'
 
-type NavBarProps = {
+export type NavBarProps = {
   menus: { label: string, href: string }[]
+  initialHref: string
+  onChange: (href: string) => void
 }
 
 export default function NavBar(props: NavBarProps) {
-  const { menus } = props
+  const { menus, initialHref, onChange } = props
 
-  console.log(window.location.pathname)
+  const [value, setValue] = React.useState(initialHref);
 
-  const [value, setValue] = React.useState(window.location.pathname);
-
-
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+  const handleChange = (_: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
+    onChange(newValue)
   };
+
+  useEffect(() => {
+    const menu = menus.find(m => m.href === initialHref)
+    if (menu) {
+      setValue(menu.href)
+    }
+  }, [initialHref])
 
   return (
     <TabContext value={value}>
-      <AppBar position="fixed" color='transparent' elevation={0} style={{}}>
+      <AppBar position="fixed" color='transparent' elevation={0}>
         <Toolbar style={{ height: '100px' }}>
           <OsirisLogo />
           <Container sx={{ height: '100%' }}>
@@ -35,7 +41,7 @@ export default function NavBar(props: NavBarProps) {
                 }
               }}>
                 {menus.map(menu => (
-                  <Tab disableRipple key={menu.label} label={menu.label} value={menu.href} href={menu.href} />
+                  <Tab disableRipple key={menu.label} label={menu.label} value={menu.href} />
                 ))}
               </TabList>
             </Box>

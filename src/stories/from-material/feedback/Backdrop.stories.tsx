@@ -23,7 +23,7 @@ export default {
 
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Backdrop> = (args) => {
+export const Template: ComponentStory<typeof Backdrop> = () => {
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
     setOpen(false);

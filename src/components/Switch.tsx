@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { styled } from '@mui/system';
 import SwitchUnstyled, { switchUnstyledClasses, SwitchUnstyledProps } from '@mui/base/SwitchUnstyled';
 
@@ -106,6 +105,6 @@ const Root = styled('span')(
 
 export default function Switch(props: SwitchUnstyledProps) {
   return (
-    <SwitchUnstyled component={Root} {...props}  />
+    <SwitchUnstyled component={Root} {...props} />
   );
 }
