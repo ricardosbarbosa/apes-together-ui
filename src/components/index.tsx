@@ -1,10 +1,12 @@
+export { default as OsirisLogo } from './OsirisLogo/OsirisLogo'
+
 // Inputs
 export { Timeline } from '@mui/lab'
 export { TimelineItem } from '@mui/lab'
 export { TimelineSeparator } from '@mui/lab'
 export { TimelineConnector } from '@mui/lab'
 export { TimelineContent } from '@mui/lab'
-export { TimelineDot } from '@mui/lab' 
+export { TimelineDot } from '@mui/lab'
 export { Autocomplete } from '@mui/material'
 export { Button } from '@mui/material' // apes-together
 export { ButtonGroup } from '@mui/material'
@@ -46,7 +48,7 @@ export { Drawer, SwipeableDrawer } from '@mui/material'
 export { Link } from '@mui/material'
 export { Menu, MenuItem } from '@mui/material'
 export { Pagination } from '@mui/material'
-export { SpeedDial,SpeedDialAction, SpeedDialIcon } from '@mui/material'
+export { SpeedDial, SpeedDialAction, SpeedDialIcon } from '@mui/material'
 export { Stepper, Step, StepButton, StepContent, StepContext, StepIcon, StepLabel } from '@mui/material'
 export { Tabs, Tab } from '@mui/material'
 // Layout
@@ -68,10 +70,10 @@ export { TextareaAutosize } from '@mui/material'
 export { Fade, Collapse, Grow, Slide, Zoom } from '@mui/material'
 export { useMediaQuery } from '@mui/material'
 // Lab
-export { DatePicker } from '@mui/lab' 
-export { DateRangePicker } from '@mui/lab' 
-export { DateTimePicker } from '@mui/lab' 
-export { TimePicker } from '@mui/lab' 
+export { DatePicker } from '@mui/lab'
+export { DateRangePicker } from '@mui/lab'
+export { DateTimePicker } from '@mui/lab'
+export { TimePicker } from '@mui/lab'
 export { Masonry } from '@mui/lab'
 export { TreeView, TreeItem } from '@mui/lab'
 export { LoadingButton } from '@mui/lab'
@@ -90,4 +92,4 @@ export { LoadingButton } from '@mui/lab'
 // or for Day.js
 // or for Luxon
 // or for Moment.js
-export {LocalizationProvider} from '@mui/lab'
+export { LocalizationProvider } from '@mui/lab'
