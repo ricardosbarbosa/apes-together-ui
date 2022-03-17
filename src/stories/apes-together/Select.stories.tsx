@@ -14,7 +14,7 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],

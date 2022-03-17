@@ -216,23 +216,39 @@ const theme = createTheme({
     },
     MuiSelect: {
       styleOverrides: {
+        nativeInput: {
+        },
         select: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
-          border: `2px solid #DFDFDF`,
-          minWidth: '252px',
-          // height: '52px',
-          padding: '13px 15px 12px 15px',
-          fontSize: '15px',
-          '&:hover:enabled': {
-            background: 'white',
-            border: `2px solid ${theme.palette.primary.dark}`,
-            // border: '2px solid #B1B1B1'
-          },
+          boxSizing: 'border-box',
+          height: '52px',
+          border: `2px solid transparent`,
+          padding: '14px 14px',
+
           '&:focus': {
             boxSizing: 'border-box',
             boxShadow: `0px 0px 0px 4px ${theme.palette.primary.light}`,
             border: `2px solid ${theme.palette.primary.main}`,
           },
-          "&.Mui-disabled": {
+        }),
+        // @ts-ignore
+        root: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
+          boxSizing: 'border-box',
+          borderRadius: '12px',
+          minWidth: '252px',
+
+          fontSize: '15px',
+          '&:hover:not': {
+            boxSizing: 'border-box',
+            border: `2px solid #DFDFDF`,
+          },
+          '&:hover:enabled': {
+            boxSizing: 'border-box',
+            border: `2px solid ${theme.palette.primary.dark}`,
+            borderRadius: '12px'
+          },
+
+          "& .Mui-disabled": {
+            boxSizing: 'border-box',
             border: '2px solid #DFDFDF',
             opacity: '0.4',
             background: 'transparent',
