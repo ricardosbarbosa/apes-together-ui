@@ -1,3 +1,4 @@
+import '../index.css'
 export { default as OsirisLogo } from './OsirisLogo/OsirisLogo'
 
 // Inputs
