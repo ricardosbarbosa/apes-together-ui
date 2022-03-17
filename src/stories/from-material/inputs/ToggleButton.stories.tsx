@@ -16,18 +16,18 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof ToggleButtonGroup>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof ToggleButtonGroup> = (args) =>  {
+export const Template: ComponentStory<typeof ToggleButtonGroup> = () => {
   const [alignment, setAlignment] = React.useState<string | null>('left');
 
   const handleAlignment = (
-    event: React.MouseEvent<HTMLElement>,
+    _: React.MouseEvent<HTMLElement>,
     newAlignment: string | null,
   ) => {
     setAlignment(newAlignment);

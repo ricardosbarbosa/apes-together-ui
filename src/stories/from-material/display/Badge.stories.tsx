@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Badge, Stack } from '@mui/material';
 import ThemeProvider from '../../../components/ThemeProvider';
@@ -23,7 +22,7 @@ export default {
 } as ComponentMeta<typeof Badge>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Badge> = (args) => {
+export const Template: ComponentStory<typeof Badge> = () => {
   return (
     <Stack spacing={2} direction="row">
       <Badge badgeContent={4} color="secondary" >

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import ThemeProvider from '../../components/ThemeProvider';
 import { Chip, Stack, Avatar } from '@mui/material';
@@ -14,7 +13,7 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
@@ -25,7 +24,7 @@ export const Apes: ComponentStory<typeof Chip> = () => (
   <Stack direction="column" spacing={1} alignItems="start">
     <Chip icon={<CheckCircle />} label="open" color="success" size="small" />
     <Chip icon={<Prohibit />} label="closed" color="secondary" size="small" />
- </Stack>
+  </Stack>
 )
 
 export const Colored: ComponentStory<typeof Chip> = () => (
@@ -40,7 +39,7 @@ export const Colored: ComponentStory<typeof Chip> = () => (
       <Chip label="warning" color="warning" />
     </Stack>
     <Stack direction="row" spacing={1}>
-      
+
       <Chip label="default" color="default" variant='outlined' />
       <Chip label="primary" color="primary" variant='outlined' />
       <Chip label="secondary" color="secondary" variant='outlined' />
@@ -49,8 +48,8 @@ export const Colored: ComponentStory<typeof Chip> = () => (
       <Chip label="success" color="success" variant='outlined' />
       <Chip label="warning" color="warning" variant='outlined' />
     </Stack>
-   
- </Stack>
+
+  </Stack>
 )
 
 
@@ -58,28 +57,28 @@ export const Basic: ComponentStory<typeof Chip> = () => (
   <Stack direction="row" spacing={1}>
     <Chip label="Chip default" />
     <Chip label="Chip Outlined" variant="outlined" />
- </Stack>
+  </Stack>
 )
-  
+
 export const Clickable: ComponentStory<typeof Chip> = () => (
   <Stack direction="row" spacing={1}>
     <Chip label="default" onClick={() => alert('Clickable')} />
     <Chip label="outlined" variant="outlined" onClick={() => alert('Clickable outlined')} />
- </Stack>
+  </Stack>
 )
 
 export const Deletable: ComponentStory<typeof Chip> = () => (
   <Stack direction="row" spacing={1}>
     <Chip label="default" onDelete={() => alert('default Deletable')} />
     <Chip label="outlined" variant="outlined" onDelete={() => alert('outlined Deletable')} />
- </Stack>
+  </Stack>
 )
 
 export const ClickableLink: ComponentStory<typeof Chip> = () => (
   <Stack direction="row" spacing={1}>
     <Chip label="Clickable Link" component="a" href="#basic-chip" clickable />
-    <Chip label="Clickable Link" component="a" href="#basic-chip" variant="outlined" clickable/>
- </Stack>
+    <Chip label="Clickable Link" component="a" href="#basic-chip" variant="outlined" clickable />
+  </Stack>
 )
 
 export const CustomDeleteIcon: ComponentStory<typeof Chip> = () => (
@@ -97,7 +96,7 @@ export const CustomDeleteIcon: ComponentStory<typeof Chip> = () => (
       deleteIcon={<TrashSimple />}
       variant="outlined"
     />
- </Stack>
+  </Stack>
 )
 
 export const AvatarChip: ComponentStory<typeof Chip> = () => (
@@ -108,20 +107,20 @@ export const AvatarChip: ComponentStory<typeof Chip> = () => (
       label="Avatar"
       variant="outlined"
     />
- </Stack>
+  </Stack>
 )
 
 export const Icons: ComponentStory<typeof Chip> = () => (
   <Stack direction="row" spacing={1}>
     <Chip icon={<FaceMask />} label="With Icon" />
     <Chip icon={<FaceMask />} label="With Icon" variant="outlined" />
- </Stack>
+  </Stack>
 )
 export const Sizes: ComponentStory<typeof Chip> = () => (
   <Stack direction="column" spacing={2} alignItems="flex-start">
     <Chip label="Small" size="small" />
     <Chip label="Small" size="small" variant="outlined" />
-    <Chip label="Medium" size="medium"  />
+    <Chip label="Medium" size="medium" />
     <Chip label="Medium" size="medium" variant="outlined" />
- </Stack>
+  </Stack>
 )

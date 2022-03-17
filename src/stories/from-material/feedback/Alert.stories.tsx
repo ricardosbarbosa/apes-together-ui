@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Alert, Stack } from '@mui/material';
 import ThemeProvider from '../../../components/ThemeProvider';
@@ -23,7 +22,7 @@ export default {
 
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Alert> = (args) => {
+export const Template: ComponentStory<typeof Alert> = () => {
   return (
     <Stack sx={{ width: '100%' }} spacing={2}>
       <Alert severity="error">This is an error alert — check it out!</Alert>

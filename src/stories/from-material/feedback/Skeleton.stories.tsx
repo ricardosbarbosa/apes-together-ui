@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Box, Grid, Skeleton, Stack, Typography } from '@mui/material';
 import ThemeProvider from '../../../components/ThemeProvider';
@@ -92,7 +91,7 @@ function Media(props: MediaProps) {
 
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Skeleton> = (args) => {
+export const Template: ComponentStory<typeof Skeleton> = () => {
   return (
     <Stack spacing={2} alignItems='center' direction={'column'}>
       <Stack spacing={1} >

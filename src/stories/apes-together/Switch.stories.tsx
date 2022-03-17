@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import ThemeProvider from '../../components/ThemeProvider';
 import Switch from '../../components/Switch';
@@ -14,11 +13,11 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Switch>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Switch> = (args) => <Switch />;
+export const Template: ComponentStory<typeof Switch> = () => <Switch />;

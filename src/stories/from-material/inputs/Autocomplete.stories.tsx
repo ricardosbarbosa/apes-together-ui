@@ -1,6 +1,5 @@
 import ThemeProvider from '../../../components/ThemeProvider';
 
-import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
@@ -144,19 +143,19 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Autocomplete>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Autocomplete> = (args) => (
+export const Template: ComponentStory<typeof Autocomplete> = () => (
   <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={top100Films}
-      sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Movie" />}
-    />
+    disablePortal
+    id="combo-box-demo"
+    options={top100Films}
+    sx={{ width: 300 }}
+    renderInput={(params) => <TextField {...params} label="Movie" />}
+  />
 );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import {  Rating, Box } from '@mui/material';
+import { Rating, Box } from '@mui/material';
 import ThemeProvider from '../../../components/ThemeProvider';
 
 
@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
@@ -36,7 +36,7 @@ const labels: { [index: string]: string } = {
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Rating> = (args) => {
+export const Template: ComponentStory<typeof Rating> = () => {
   const [value, setValue] = React.useState<number | null>(2);
   const [hover, setHover] = React.useState(-1);
 
@@ -53,23 +53,23 @@ export const Template: ComponentStory<typeof Rating> = (args) => {
         value={value}
         max={5}
         // precision={0.5}
-        onChange={(event, newValue) => {
-          console.log({newValue})
+        onChange={(_, newValue) => {
+          console.log({ newValue })
           setValue(newValue);
         }}
-        onChangeActive={(event, newHover) => {
-          console.log({newHover})
+        onChangeActive={(_, newHover) => {
+          console.log({ newHover })
           // setHover(newHover);
           setHover(newHover);
         }}
-        // icon={<span>ok</span>}
-        // emptyIcon={<span>ok</span>}
+      // icon={<span>ok</span>}
+      // emptyIcon={<span>ok</span>}
       />
       {value !== null && (
         <Box sx={{ ml: 2 }}>
           {labels[hover !== -1 ? hover : value]}
         </Box>
       )}
- </Box>
+    </Box>
   )
 };

@@ -16,7 +16,7 @@ export default {
   decorators: [
     (Story) => (
       <ThemeProvider>
-        <Story/>
+        <Story />
       </ThemeProvider>
     ),
   ],
@@ -44,9 +44,9 @@ export const Template: ComponentStory<typeof Button> = () => (
       <Button variant='text'>Primary</Button>
     </Grid>
     <Grid item >
-      <Button variant='text'disabled>Disabled</Button>
+      <Button variant='text' disabled>Disabled</Button>
     </Grid>
-    <Grid item >  
+    <Grid item >
       <Button variant='text' href="#text-buttons">Link</Button>
     </Grid>
     <Grid item xs={12}>
@@ -54,10 +54,10 @@ export const Template: ComponentStory<typeof Button> = () => (
     </Grid>
     <Grid item >
       <Button variant="contained">Contained</Button>
-      </Grid>
+    </Grid>
     <Grid item >
       <Button variant="contained" disabled>Disabled</Button>
-      </Grid>
+    </Grid>
     <Grid item >
       <Button variant="contained" href="#contained-buttons">Link</Button>
     </Grid>
@@ -66,59 +66,59 @@ export const Template: ComponentStory<typeof Button> = () => (
     </Grid>
     <Grid item >
       <Button variant="outlined">Primary</Button>
-      </Grid>
+    </Grid>
     <Grid item >
       <Button variant="outlined" disabled>Disabled</Button>
-      </Grid>
+    </Grid>
     <Grid item >
       <Button variant="outlined" href="#outlined-buttons">Link</Button>
     </Grid>
     <Grid item xs={12}>
       <Typography variant='h5' fontWeight='bold'>Color</Typography>
     </Grid>
-    
-    
+
+
     <Grid item >
       <Button variant="contained" color="success">Success</Button>
-      </Grid>
+    </Grid>
     <Grid item >
       <Button variant="contained" color="error">Error</Button>
     </Grid>
-    
+
     <Grid item >
       <Button variant="outlined" color="success">Success</Button>
-      </Grid>
+    </Grid>
     <Grid item >
       <Button variant="outlined" color="error">Error</Button>
     </Grid>
     <Grid item xs={12}>
       <Typography variant='h5' fontWeight='bold'>Sizes</Typography>
     </Grid>
-    
+
     <Grid item xs={3}>
       <Button size="small">Small</Button>
     </Grid>
     <Grid item xs={3}>
       <Button size="medium">Medium</Button>
-      </Grid>
+    </Grid>
     <Grid item xs={3}>
       <Button size="large">Large</Button>
-      </Grid>
+    </Grid>
     <Grid item xs={3}>
       <Button variant="outlined" size="small">Small</Button>
-      </Grid>
+    </Grid>
     <Grid item xs={3}>
       <Button variant="outlined" size="medium">Medium</Button>
-      </Grid>
+    </Grid>
     <Grid item xs={3}>
       <Button variant="outlined" size="large">Large</Button>
-      </Grid>
+    </Grid>
     <Grid item xs={3}>
       <Button variant="contained" size="small">Small</Button>
-      </Grid>
+    </Grid>
     <Grid item xs={3}>
       <Button variant="contained" size="medium">Medium</Button>
-      </Grid>
+    </Grid>
     <Grid item xs={3}>
       <Button variant="contained" size="large">Large</Button>
     </Grid>
@@ -127,7 +127,7 @@ export const Template: ComponentStory<typeof Button> = () => (
     </Grid>
     <Grid item >
       <Button variant="outlined" startIcon={<Trash />}>Delete</Button>
-      </Grid>
+    </Grid>
     <Grid item >
       <Button variant="contained" endIcon={<PaperPlane />}>Send</Button>
     </Grid>
@@ -154,7 +154,7 @@ export const Template: ComponentStory<typeof Button> = () => (
         <ShoppingCart />
       </IconButton>
     </Grid>
-    
+
     <Grid item xs={12}>
       <Typography variant='h5' fontWeight='bold'>Icon Buttons Sizes</Typography>
     </Grid>
@@ -170,10 +170,10 @@ export const Template: ComponentStory<typeof Button> = () => (
     </Grid>
     <Grid item >
       <IconButton aria-label="delete" size="large">
-        <Trash/>
+        <Trash />
       </IconButton>
     </Grid>
-   
+
     <Grid item xs={12}>
       <Typography variant='h5' fontWeight='bold'>Icon Buttons Colors</Typography>
     </Grid>

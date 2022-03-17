@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Avatar, AvatarGroup, Badge, Stack, styled } from '@mui/material';
 import ThemeProvider from '../../../components/ThemeProvider';
@@ -30,7 +29,7 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
 }));
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Template: ComponentStory<typeof Avatar> = (args) => {
+export const Template: ComponentStory<typeof Avatar> = () => {
   return (
     <Stack direction="column" spacing={2}>
       <Stack direction="row" spacing={2}>
