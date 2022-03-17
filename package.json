@@ -1,7 +1,7 @@
 {
-  "name": "@ricardosbarbosa/apes-together-ui",
+  "name": "@apes-together-xyz/apes-together-ui",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/ricardosbarbosa"
+    "registry": "https://npm.pkg.github.com/apes-together-xyz"
   },
   "version": "0.1.2",
   "private": false,
