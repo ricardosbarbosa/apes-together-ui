@@ -1,7 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ThemeProvider from '../../components/ThemeProvider';
-import { AppBar } from '@mui/material';
+import ApesTogetherThemeProvider from '../../components/ThemeProvider';
+import { AppBar, Tab } from '@mui/material';
 import NavBar from '../../components/NavBar/NavBar';
+import React, { useMemo } from 'react';
+import { TabList } from '@mui/lab';
 
 export default {
   title: 'Organisms/AppBar',
@@ -9,9 +11,9 @@ export default {
   argTypes: {},
   decorators: [
     (Story) => (
-      <ThemeProvider>
+      <ApesTogetherThemeProvider>
         <Story />
-      </ThemeProvider>
+      </ApesTogetherThemeProvider>
     ),
   ],
   parameters: {
@@ -21,24 +23,35 @@ export default {
 
 export const Apes: ComponentStory<typeof AppBar> = () => {
 
+  const [value, setValue] = React.useState('/dashboard');
+
+  const handleChange = (_: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+  };
+
+  const menus = useMemo(() => [
+    {
+      label: 'Storybook',
+      href: '/iframe.html'
+    },
+    {
+      label: 'Dashboard',
+      href: '/dashboard'
+    },
+    {
+      label: "Lists You've Joined",
+      href: '/joined-list'
+    }
+  ], [])
+
+
   return (
-    <NavBar
-      onChange={console.log}
-      initialHref='/iframe.html'
-      menus={[
-        {
-          label: 'Storybook',
-          href: '/iframe.html'
-        },
-        {
-          label: 'Dashboard',
-          href: '/dashboard'
-        },
-        {
-          label: "Lists You've Joined",
-          href: '/joined-list'
-        }
-      ]}
-    />
+    <NavBar value={value}>
+      <TabList onChange={handleChange} sx={{ height: '100%' }}>
+        {menus.map(menu => (
+          <Tab disableRipple key={menu.label} label={menu.label} value={menu.href} />
+        ))}
+      </TabList>
+    </NavBar>
   )
 }

@@ -1,23 +1,23 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Stack } from '@mui/material';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 import { pink } from '@mui/material/colors';
 
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+
 export default {
   title: 'Others/inputs/RadioGroup',
   component: RadioGroup,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+
   argTypes: {
     backgroundColor: { control: 'color' },
   },
   decorators: [
     (Story) => (
-      <ThemeProvider>
+      <ApesTogetherThemeProvider>
         <Story />
-      </ThemeProvider>
+      </ApesTogetherThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof RadioGroup>;
@@ -25,7 +25,7 @@ export default {
 
 
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+
 export const Template: ComponentStory<typeof RadioGroup> = () => {
   const [selectedValue, setSelectedValue] = React.useState('a');
 

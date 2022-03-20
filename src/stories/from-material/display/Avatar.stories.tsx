@@ -1,23 +1,23 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Avatar, AvatarGroup, Badge, Stack, styled } from '@mui/material';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 import { deepOrange, deepPurple, green, pink } from '@mui/material/colors';
 import { File, Folder, HeartBreak } from 'phosphor-react';
 
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+
 export default {
   title: 'Others/display/Avatar',
   component: Avatar,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+
   argTypes: {
     backgroundColor: { control: 'color' },
   },
   decorators: [
     (Story) => (
-      <ThemeProvider>
+      <ApesTogetherThemeProvider>
         <Story />
-      </ThemeProvider>
+      </ApesTogetherThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Avatar>;
@@ -28,7 +28,7 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
   border: `2px solid ${theme.palette.background.paper}`,
 }));
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+
 export const Template: ComponentStory<typeof Avatar> = () => {
   return (
     <Stack direction="column" spacing={2}>

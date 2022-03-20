@@ -1,26 +1,26 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button, ButtonGroup, Stack } from '@mui/material';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+
 export default {
   title: 'Others/inputs/ButtonGroup',
   component: ButtonGroup,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+
   argTypes: {
     backgroundColor: { control: 'color' },
   },
   decorators: [
     (Story) => (
-      <ThemeProvider>
+      <ApesTogetherThemeProvider>
         <Story />
-      </ThemeProvider>
+      </ApesTogetherThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof ButtonGroup>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+
 export const Template: ComponentStory<typeof ButtonGroup> = () => (
   <Stack direction='column' spacing={2} alignItems='center'>
     <ButtonGroup variant="contained" aria-label="outlined primary button group">

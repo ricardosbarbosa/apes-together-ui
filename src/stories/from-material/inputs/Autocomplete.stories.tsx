@@ -1,4 +1,4 @@
-import ThemeProvider from '../../../components/ThemeProvider';
+import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -132,24 +132,24 @@ const top100Films = [
   { label: 'Monty Python and the Holy Grail', year: 1975 },
 ];
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+
 export default {
   title: 'Others/inputs/Autocomplete',
   component: Autocomplete,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+
   argTypes: {
     backgroundColor: { control: 'color' },
   },
   decorators: [
     (Story) => (
-      <ThemeProvider>
+      <ApesTogetherThemeProvider>
         <Story />
-      </ThemeProvider>
+      </ApesTogetherThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Autocomplete>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+
 export const Template: ComponentStory<typeof Autocomplete> = () => (
   <Autocomplete
     disablePortal

@@ -1,23 +1,23 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Rating, Box } from '@mui/material';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 
 
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+
 export default {
   title: 'Others/inputs/Rating',
   component: Rating,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+
   argTypes: {
     backgroundColor: { control: 'color' },
   },
   decorators: [
     (Story) => (
-      <ThemeProvider>
+      <ApesTogetherThemeProvider>
         <Story />
-      </ThemeProvider>
+      </ApesTogetherThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Rating>;
@@ -35,7 +35,7 @@ const labels: { [index: string]: string } = {
   5: 'Excellent+',
 };
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
+
 export const Template: ComponentStory<typeof Rating> = () => {
   const [value, setValue] = React.useState<number | null>(2);
   const [hover, setHover] = React.useState(-1);

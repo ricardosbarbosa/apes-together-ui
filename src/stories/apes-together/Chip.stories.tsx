@@ -1,20 +1,21 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ThemeProvider from '../../components/ThemeProvider';
+
 import { Chip, Stack, Avatar } from '@mui/material';
 import { Check, CheckCircle, FaceMask, Prohibit, TrashSimple } from 'phosphor-react';
+import ApesTogetherThemeProvider from '../../components/ThemeProvider';
 
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+
 export default {
   title: 'Components/Chip',
   component: Chip,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+
   argTypes: {},
   decorators: [
     (Story) => (
-      <ThemeProvider>
+      <ApesTogetherThemeProvider>
         <Story />
-      </ThemeProvider>
+      </ApesTogetherThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Chip>;

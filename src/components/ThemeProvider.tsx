@@ -1,8 +1,8 @@
 
-import React from 'react'
-import { ButtonProps, createTheme, Theme, ThemeProvider as MuiThemeProvider } from '@mui/material';
-// When using TypeScript 4.x and above
-import type { } from '@mui/lab/themeAugmentation';
+import { ButtonProps } from '@mui/material';
+import { ThemeProvider, createTheme, Theme } from '@mui/material/styles';
+
+declare module '@mui/material/styles' { }
 
 const theme = createTheme({
   shape: {
@@ -22,10 +22,10 @@ const theme = createTheme({
       // light: 'rgba(126, 74, 155, 0.12)'
     },
     secondary: {
-      main: '#E2778A',
-      dark: '#e24e69',
-      light: '#e4b0ba',
-      contrastText: '#FFFFFF'
+      main: '#DFDFDF',
+      dark: '#612B80',
+      light: '#efe9f3',
+      contrastText: '#303030'
     },
     success: {
       dark: '#285c2a',
@@ -46,8 +46,6 @@ const theme = createTheme({
     }
   },
   components: {
-
-
     MuiDivider: {
       styleOverrides: {
         root: {
@@ -62,6 +60,7 @@ const theme = createTheme({
         disableFocusRipple: true
       },
       styleOverrides: {
+        // @ts-ignore
         root: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => {
           console.log({ theme, ownerState })
           return ({
@@ -72,28 +71,28 @@ const theme = createTheme({
             borderRadius: '12px',
             aspectRatio: 1,
             // @ts-ignore
-            color: theme.palette[ownerState.color === 'default' ? 'primary' : ownerState.color].main,
-            // color: '#B1B1B1',
+            // color: theme.palette[ownerState.color === 'default' ? 'primary' : ownerState.color].main,
+            color: '#B1B1B1',
             background: '#FFFFF',
             // @ts-ignore
-            border: `2px solid ${theme.palette[ownerState.color === 'default' ? 'primary' : ownerState.color].main}`,
-            // border: '2px solid #DFDFDF',
+            // border: `2px solid ${theme.palette[ownerState.color === 'default' ? 'primary' : ownerState.color].main}`,
+            border: '2px solid #DFDFDF',
 
             '&:focus': {
               boxSizing: 'border-box',
               // @ts-ignore
               boxShadow: `0px 0px 0px 4px ${theme.palette[ownerState.color === 'default' ? 'primary' : ownerState.color].light}`,
               // @ts-ignore
-              border: `2px solid ${theme.palette[ownerState.color === 'default' ? 'primary' : ownerState.color].dark}`,
-              // border: 2px solid #7E4A9B',
+              // border: `2px solid ${theme.palette[ownerState.color === 'default' ? 'primary' : ownerState.color].dark}`,
+              border: '2px solid #7E4A9B',
               // color: '#7E4A9B',
               background: 'transparent'
             },
             '&:hover': {
               // @ts-ignore
-              color: theme.palette[ownerState.color === 'default' ? 'primary' : ownerState.color].dark,
+              // color: theme.palette[ownerState.color === 'default' ? 'primary' : ownerState.color].dark,
               // color: theme.palette.primary.dark,
-              // color: '#7E4A9B',
+              color: '#7E4A9B',
               // @ts-ignore
               border: `2px solid ${theme.palette[ownerState.color === 'default' ? 'primary' : ownerState.color].dark}`,
               // border: '2px solid #B1B1B1',
@@ -140,10 +139,11 @@ const theme = createTheme({
               boxShadow: `0px 0px 0px 4px ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].light}`,
               border: `2px solid ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark}`,
               // color: theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].contrastText,
+              color: '#303030',
             },
             '&:hover': {
               border: `2px solid ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark}`,
-
+              // color: '#303030',
               // color: theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark
             },
             '&:disabled': {
@@ -158,6 +158,7 @@ const theme = createTheme({
 
           // border: 'none',
           color: theme.palette.common.white + ' !important',
+          border: `2px solid ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].main} !important`,
           '&:disabled': {
             border: `2px solid ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].main}  !important`,
             background: theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].main,
@@ -171,24 +172,32 @@ const theme = createTheme({
           '&:focus': {
             boxSizing: 'border-box',
             boxShadow: `0px 0px 0px 4px ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].light}`,
-            border: '0px solid red',
+            border: `2px solid ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].light}`,
             color: theme.palette.common.white + ' !important',
           }
         }),
 
         outlined: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
+          color: '#303030',
           '&:hover': {
             background: 'transparent',
             border: `2px solid ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark}`,
             // border: '2px solid #B1B1B1'
             color: theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark
           },
+          '&:focus': {
+            color: '#7E4A9B',
+          },
+          '&:disabled': {
+            color: '#303030'
+          }
+
         }),
         text: ({ theme }: { theme: Theme, ownerState: ButtonProps }) => ({
           border: `2px solid ${theme.palette.common.white}`,
           '&:hover': {
             background: 'white',
-            // border: `2px solid ${theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark}`,
+            // border: `2px solid ${ theme.palette[ownerState.color === 'inherit' || ownerState.color === undefined ? 'primary' : ownerState.color].dark }`,
             // border: '2px solid #B1B1B1'
           },
           '&:disabled': {
@@ -218,6 +227,7 @@ const theme = createTheme({
       styleOverrides: {
         nativeInput: {
         },
+        // @ts-ignore
         select: ({ theme, ownerState }: { theme: Theme, ownerState: ButtonProps }) => ({
           boxSizing: 'border-box',
           height: '52px',
@@ -317,10 +327,10 @@ const theme = createTheme({
 
 type Props = {}
 
-export default function ThemeProvider({ children }: React.PropsWithChildren<Props>) {
+export default function ApesTogetherThemeProvider({ children }: React.PropsWithChildren<Props>) {
   return (
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       {children}
-    </MuiThemeProvider>
+    </ThemeProvider>
   )
 }
