@@ -3,8 +3,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Backdrop, Button, CircularProgress, Stack } from '@mui/material';
 import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 
-
-
 export default {
   title: 'Others/feedback/Backdrop',
   component: Backdrop,

@@ -4,8 +4,6 @@ import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Stack } fr
 import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 import { pink } from '@mui/material/colors';
 
-
-
 export default {
   title: 'Others/inputs/RadioGroup',
   component: RadioGroup,

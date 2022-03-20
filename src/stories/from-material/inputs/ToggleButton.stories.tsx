@@ -4,8 +4,6 @@ import { ToggleButtonGroup, ToggleButton } from '@mui/material';
 import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 import { TextAlignCenter, TextAlignJustify, TextAlignLeft, TextAlignRight } from 'phosphor-react';
 
-
-
 export default {
   title: 'Others/inputs/ToggleButtonGroup',
   component: ToggleButtonGroup,

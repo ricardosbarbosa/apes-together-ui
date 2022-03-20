@@ -2,8 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Box, CircularProgress, LinearProgress, Stack } from '@mui/material';
 import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 
-
-
 export default {
   title: 'Others/feedback/CircularProgress',
   component: CircularProgress,

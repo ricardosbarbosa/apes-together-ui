@@ -5,8 +5,6 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 import { Button, Stack } from '@mui/material';
 
-
-
 export default {
   title: 'Others/feedback/Snackbar',
   component: Snackbar,

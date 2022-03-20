@@ -4,8 +4,6 @@ import { Box, Slider, Stack } from '@mui/material';
 import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 import { SpeakerHigh, SpeakerLow } from 'phosphor-react';
 
-
-
 export default {
   title: 'Others/inputs/Slider',
   component: Slider,

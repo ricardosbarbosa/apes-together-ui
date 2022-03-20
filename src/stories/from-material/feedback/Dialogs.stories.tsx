@@ -3,8 +3,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Dialog, Box, Button, DialogActions, DialogContent, DialogContentText, DialogProps, DialogTitle, FormControl, FormControlLabel, InputLabel, MenuItem, Select, SelectChangeEvent, Switch } from '@mui/material';
 import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 
-
-
 export default {
   title: 'Others/feedback/Dialog',
   component: Dialog,

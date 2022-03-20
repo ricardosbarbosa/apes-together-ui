@@ -2,8 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Alert, Stack } from '@mui/material';
 import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 
-
-
 export default {
   title: 'Others/feedback/Alert',
   component: Alert,

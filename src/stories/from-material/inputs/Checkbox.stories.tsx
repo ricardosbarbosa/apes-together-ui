@@ -2,8 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Checkbox } from '@mui/material';
 import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
 
-
-
 export default {
   title: 'Others/inputs/Checkbox',
   component: Checkbox,
