@@ -47,7 +47,7 @@ export const Template: ComponentStory<typeof Dialog> = () => {
 
   return (
     <React.Fragment>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <Button variant="secondary" onClick={handleClickOpen}>
         Open max-width dialog
       </Button>
       <Dialog

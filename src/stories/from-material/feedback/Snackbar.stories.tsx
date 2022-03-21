@@ -46,7 +46,7 @@ export const Template: ComponentStory<typeof Snackbar> = () => {
 
   return (
     <Stack spacing={2} sx={{ width: '100%' }}>
-      <Button variant="outlined" onClick={handleClick}>
+      <Button variant="secondary" onClick={handleClick}>
         Open success snackbar
       </Button>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>

@@ -1,7 +1,7 @@
 import { TabContext } from '@mui/lab'
 import { AppBar, Toolbar, Container, Box } from '@mui/material'
 import React from 'react'
-import OsirisLogo from '../OsirisLogo/OsirisLogo'
+import OsirisLogo from './OsirisLogo'
 
 export type NavBarProps = {
   value: string,
@@ -14,16 +14,23 @@ export default function NavBar(props: React.PropsWithChildren<NavBarProps>) {
   return (
     <TabContext value={value}>
       <AppBar position="fixed" elevation={0} style={{ backgroundColor: 'white' }}>
-        <Toolbar sx={{ height: '100px', display: 'flex' }}>
+        <Toolbar sx={{ height: '102px', display: 'flex' }}>
           <Box sx={{ position: 'absolute', left: '40px' }}>
             <OsirisLogo />
           </Box>
           <Container sx={{
-            height: '100px',
+            height: '102px',
             '.MuiTab-root': {
-              height: '100px',
+              height: '102px',
+              color: '#303030 !important',
+              textTransform: 'none',
+              fontStyle: 'normal',
+              fontWeight: '500',
+              fontSize: '15px',
+              lineHeight: '130%',
+            },
+            '.Mui-selected': {
               color: '#7E4A9B !important',
-              fontWeight: 'normal'
             },
             '.MuiTabs-indicator': {
               backgroundColor: '#7E4A9B !important',

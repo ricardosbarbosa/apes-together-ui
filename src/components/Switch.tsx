@@ -39,6 +39,7 @@ const Root = styled('span')(
     height: 100%;
     width: 100%;
     position: absolute;
+    transition: 0.3s;
   }
 
   &:hover {
@@ -64,6 +65,7 @@ const Root = styled('span')(
     background-color: ${grey[500]};
     box-shadow: 0px 0px 0px 4px rgba(223, 223, 223, 0.32);
     border-radius: 20px;
+    transition: 0.3s;
   }
 
   &.${switchUnstyledClasses.checked} {

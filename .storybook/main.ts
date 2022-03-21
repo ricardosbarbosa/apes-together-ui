@@ -16,4 +16,8 @@ module.exports = {
   "reactOptions": {
     "fastRefresh": true
   },
+  "externals": {
+    react: 'react',
+    'react-dom': 'react-dom',
+  },
 }

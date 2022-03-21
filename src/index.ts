@@ -2,6 +2,7 @@ import './index.css'
 export { ThemeProvider } from './components'
 export { OsirisLogo } from './components'
 export { NavBar } from './components'
+export { SearchTextField } from './components'
 
 export * from "@mui/material"
 export { SpeedDialAction } from "@mui/material"

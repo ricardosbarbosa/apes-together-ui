@@ -1,12 +1,12 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import ThemeProvider from '../../components/ThemeProvider';
 import { AppBar, Tab } from '@mui/material';
-import NavBar from '../../components/NavBar/NavBar';
+import NavBar from '../../components/NavBar';
 import React, { useMemo } from 'react';
 import { TabList } from '@mui/lab';
 
 export default {
-  title: 'Organisms/AppBar',
+  title: 'Organisms/NavBar',
   component: AppBar,
   argTypes: {},
   decorators: [

@@ -1,4 +1,5 @@
 import '../index.css'
-export { default as NavBar } from './NavBar/NavBar'
+export { default as NavBar } from './NavBar'
 export { default as ThemeProvider } from './ThemeProvider'
-export { default as OsirisLogo } from './OsirisLogo/OsirisLogo'
+export { default as OsirisLogo } from './OsirisLogo'
+export { default as SearchTextField } from './SearchTextField'

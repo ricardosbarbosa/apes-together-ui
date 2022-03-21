@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import ThemeProvider from '../../components/ThemeProvider';
 import { MenuItem, Select, Stack } from '@mui/material';
+import { Heartbeat } from 'phosphor-react';
 
 
 export default {
@@ -25,13 +26,13 @@ export const Template: ComponentStory<typeof Select> = () => (
     <Select
       labelId="demo-simple-select-label"
       id="demo-simple-select"
-      label="Age"
+      label="disabled"
       onChange={console.log}
       value={10}
-      fullWidth
       disabled
+      IconComponent={Heartbeat}
     >
-      <MenuItem value={10}>Ten</MenuItem>
+      <MenuItem value={10}>Ten disabled</MenuItem>
       <MenuItem disabled value={20}>Twenty</MenuItem>
       <MenuItem value={30}>Thirty</MenuItem>
     </Select>
@@ -41,7 +42,6 @@ export const Template: ComponentStory<typeof Select> = () => (
       label="Age"
       onChange={console.log}
       value={10}
-      fullWidth
     >
       <MenuItem value={10}>Ten</MenuItem>
       <MenuItem disabled value={20}>Twenty</MenuItem>
