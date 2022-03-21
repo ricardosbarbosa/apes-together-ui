@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Divider } from '@mui/material';
-import ApesTogetherThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider';
 
 
 
@@ -13,9 +13,9 @@ export default {
   },
   decorators: [
     (Story) => (
-      <ApesTogetherThemeProvider>
+      <ThemeProvider>
         <Story />
-      </ApesTogetherThemeProvider>
+      </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Divider>;

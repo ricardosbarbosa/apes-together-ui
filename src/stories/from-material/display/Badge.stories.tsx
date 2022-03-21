@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Badge, Stack } from '@mui/material';
-import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../../components/ThemeProvider';
 import { Envelope } from 'phosphor-react';
 
 
@@ -14,9 +14,9 @@ export default {
   },
   decorators: [
     (Story) => (
-      <ApesTogetherThemeProvider>
+      <ThemeProvider>
         <Story />
-      </ApesTogetherThemeProvider>
+      </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Badge>;

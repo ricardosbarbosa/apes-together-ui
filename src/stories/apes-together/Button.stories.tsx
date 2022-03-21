@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from '@mui/material/Button';
 
-import ApesTogetherThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider';
 import { IconButton } from '@mui/material';
 import { ArrowUpRight, Plus, Trash } from 'phosphor-react';
 
@@ -15,9 +15,9 @@ export default {
   argTypes: {},
   decorators: [
     (Story) => (
-      <ApesTogetherThemeProvider >
+      <ThemeProvider >
         <Story />
-      </ApesTogetherThemeProvider>
+      </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Button>;

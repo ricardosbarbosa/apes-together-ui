@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Rating, Box } from '@mui/material';
-import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 
 
@@ -15,9 +15,9 @@ export default {
   },
   decorators: [
     (Story) => (
-      <ApesTogetherThemeProvider>
+      <ThemeProvider>
         <Story />
-      </ApesTogetherThemeProvider>
+      </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Rating>;

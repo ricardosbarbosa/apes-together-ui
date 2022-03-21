@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Box, Slider, Stack } from '@mui/material';
-import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../../components/ThemeProvider';
 import { SpeakerHigh, SpeakerLow } from 'phosphor-react';
 
 export default {
@@ -13,9 +13,9 @@ export default {
   },
   decorators: [
     (Story) => (
-      <ApesTogetherThemeProvider>
+      <ThemeProvider>
         <Story />
-      </ApesTogetherThemeProvider>
+      </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Slider>;

@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TextField, Stack } from '@mui/material';
-import ApesTogetherThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider';
 
 
 
@@ -11,9 +11,9 @@ export default {
   argTypes: {},
   decorators: [
     (Story) => (
-      <ApesTogetherThemeProvider>
+      <ThemeProvider>
         <Story />
-      </ApesTogetherThemeProvider>
+      </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof TextField>;

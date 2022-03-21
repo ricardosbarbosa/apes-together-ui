@@ -1,6 +1,6 @@
 
 import { ButtonProps } from '@mui/material';
-import { ThemeProvider, createTheme, Theme } from '@mui/material/styles';
+import { ThemeProvider as MuiThemeProvider, createTheme, Theme } from '@mui/material/styles';
 
 declare module '@mui/material/styles' { }
 
@@ -327,10 +327,10 @@ const theme = createTheme({
 
 type Props = {}
 
-export default function ApesTogetherThemeProvider({ children }: React.PropsWithChildren<Props>) {
+export default function ThemeProvider({ children }: React.PropsWithChildren<Props>) {
   return (
-    <ThemeProvider theme={theme}>
+    <MuiThemeProvider theme={theme}>
       {children}
-    </ThemeProvider>
+    </MuiThemeProvider>
   )
 }

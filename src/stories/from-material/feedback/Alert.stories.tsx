@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Alert, Stack } from '@mui/material';
-import ApesTogetherThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../../components/ThemeProvider';
 
 export default {
   title: 'Others/feedback/Alert',
@@ -11,9 +11,9 @@ export default {
   },
   decorators: [
     (Story) => (
-      <ApesTogetherThemeProvider>
+      <ThemeProvider>
         <Story />
-      </ApesTogetherThemeProvider>
+      </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Alert>;

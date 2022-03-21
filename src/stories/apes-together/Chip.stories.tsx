@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Chip, Stack, Avatar } from '@mui/material';
 import { Check, CheckCircle, FaceMask, Prohibit, TrashSimple } from 'phosphor-react';
-import ApesTogetherThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider';
 
 
 
@@ -13,9 +13,9 @@ export default {
   argTypes: {},
   decorators: [
     (Story) => (
-      <ApesTogetherThemeProvider>
+      <ThemeProvider>
         <Story />
-      </ApesTogetherThemeProvider>
+      </ThemeProvider>
     ),
   ],
 } as ComponentMeta<typeof Chip>;

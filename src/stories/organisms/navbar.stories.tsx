@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ApesTogetherThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider';
 import { AppBar, Tab } from '@mui/material';
 import NavBar from '../../components/NavBar/NavBar';
 import React, { useMemo } from 'react';
@@ -11,9 +11,9 @@ export default {
   argTypes: {},
   decorators: [
     (Story) => (
-      <ApesTogetherThemeProvider>
+      <ThemeProvider>
         <Story />
-      </ApesTogetherThemeProvider>
+      </ThemeProvider>
     ),
   ],
   parameters: {
