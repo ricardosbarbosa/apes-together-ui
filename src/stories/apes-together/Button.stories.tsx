@@ -2,11 +2,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from '@mui/material/Button';
 
 import ThemeProvider from '../../components/ThemeProvider';
-import { IconButton } from '@mui/material';
+import { IconButton, Stack } from '@mui/material';
 import { ArrowUpRight, Plus, Trash } from 'phosphor-react';
-
-// import { Grid, Typography } from '@mui/material';
-// import { Alarm, Fingerprint, PaperPlane, ShoppingCart } from 'phosphor-react';
 
 export default {
   title: 'Components/Button',
@@ -28,18 +25,16 @@ Playground.args = {
   children: 'Button',
 }
 
-export const Primary = Playground.bind({});
-Primary.args = {
-  children: 'Primary',
-  variant: 'primary',
-};
-export const DisabledPrimary = Playground.bind({});
-DisabledPrimary.args = {
-  children: 'Primary',
-  variant: 'primary',
-  color: 'primary',
-  disabled: true
-};
+
+export const Primary: ComponentStory<typeof Button> = (args) => (
+  <Stack direction={'column'} spacing={5}>
+    <Button {...args} variant='primary' children="Primary" />
+    <Button {...args} variant='primary' children="Hover" />
+    <Button {...args} variant='primary' children="Focus" />
+    <Button {...args} variant='primary' children="Disabled" disabled />
+  </Stack>
+)
+
 export const Secondary = Playground.bind({});
 Secondary.args = {
   children: 'Secondary',
@@ -57,6 +52,7 @@ RightIcon.args = {
   variant: 'secondary',
   children: 'secondary'
 };
+
 export const LeftIcon = Playground.bind({});
 LeftIcon.args = {
   startIcon: <Plus size={20} />,

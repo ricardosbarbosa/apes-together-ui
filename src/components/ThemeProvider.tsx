@@ -46,7 +46,6 @@ const theme = createTheme({
     borderRadius: '12px',
   },
   direction: 'rtl',
-
   palette: {
     apes: {
       purplePleasure: {
@@ -88,20 +87,11 @@ const theme = createTheme({
         transition: 'ease-in-out',
         'input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration': {
           display: 'none'
-        }
-
-        // "input['search']::-webkit-search-decoration": {
-        //   "-webkit-appearance": 'none'
-        // },
-        // "input['search']::-webkit-search-cancel-button": {
-        //   "-webkit-appearance": 'none'
-        // },
-        // "input['search']::-webkit-search-results-button": {
-        //   "-webkit-appearance": 'none'
-        // },
-        // "input['search']::-webkit-search-results-decoration": {
-        //   "-webkit-appearance": 'none'
-        // },
+        },
+        "& .Mui-disabled": {
+          pointerEvents: 'all !important',
+          cursor: 'not-allowed !important'
+        },
 
       }
     },
@@ -178,6 +168,11 @@ const theme = createTheme({
       }
     },
     MuiButton: {
+      defaultProps: {
+        disableFocusRipple: true,
+        disableTouchRipple: true,
+        disableRipple: true,
+      },
       variants: [
         {
           props: { variant: 'primary' },
@@ -185,6 +180,15 @@ const theme = createTheme({
             color: theme.palette.common.white,
             border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
             background: theme.palette.apes.purplePleasure.main,
+            fontFamily: 'aktiv-grotesk, sans-serif !important',
+            fontStyle: 'normal',
+            fontWeight: 700,
+            lineHeight: '16.9px',
+            textAlign: 'center',
+            fontSize: '13px',
+            height: '52px',
+            maxWidth: '256px',
+            minWidth: '256px',
             '&:hover': {
               border: `2px solid ${theme.palette.apes.purplePleasure.dark}`,
               background: theme.palette.apes.purplePleasure.dark,
@@ -197,11 +201,12 @@ const theme = createTheme({
               background: theme.palette.apes.purplePleasure.main,
               color: theme.palette.common.white,
             },
+
             '&:disabled': {
               border: `2px solid ${theme.palette.apes.purplePleasure.main} `,
               background: theme.palette.apes.purplePleasure.main,
               color: theme.palette.common.white,
-              opacity: 0.4
+              opacity: 0.4,
             },
           }),
         },
@@ -221,7 +226,6 @@ const theme = createTheme({
             },
             '&:focus': {
               color: theme.palette.apes.offBlack,
-              // color: theme.palette.apes.purplePleasure.main,
               background: theme.palette.apes.white,
               border: `2px solid ${theme.palette.apes.purplePleasure.main} `,
               boxSizing: 'border-box',
@@ -234,35 +238,34 @@ const theme = createTheme({
               color: theme.palette.apes.offBlack,
               background: theme.palette.apes.white,
               border: `2px solid ${theme.palette.apes.palladium}`,
-              opacity: 0.6
+              opacity: 0.6,
             }
           }),
         },
       ],
-      defaultProps: {
-        disableFocusRipple: true,
-      },
+
       styleOverrides: {
         root: () => {
           return ({
-            fontFamily: 'aktiv-grotesk, sans-serif',
+            textTransform: 'none',
+            letterSpacing: 'normal',
+            fontFamily: 'aktiv-grotesk, sans-serif !important',
             fontStyle: 'normal',
             fontWeight: 700,
-            lineHeight: '130%',
+            lineHeight: '16.9px',
+            textAlign: 'center',
+            fontSize: '13px',
+            height: '52px',
+            maxWidth: '256px',
+            minWidth: '256px',
+            transition: '0.3s'
           })
         },
-        sizeLarge: {
-          padding: '0 116px',
-          fontSize: '13px',
-          height: '60px'
-        },
         sizeMedium: {
-          padding: '0 100px',
           fontSize: '13px',
           height: '52px'
         },
         sizeSmall: {
-          padding: '0 84px',
           fontSize: '13px',
           height: '44px'
         },
@@ -291,10 +294,6 @@ const theme = createTheme({
         }),
         // @ts-ignore
         root: ({ theme }: { theme: Theme }) => ({
-          //   boxSizing: 'border-box',
-          //   borderRadius: '12px',
-          //   minWidth: '252px',
-          //   fontSize: '15px',
           background: theme.palette.apes.white,
           border: `2px solid ${theme.palette.apes.white}`,
           '&:hover': {
@@ -306,27 +305,8 @@ const theme = createTheme({
             boxSizing: 'border-box',
             border: `2px solid red`,
           },
-          // '&:hover': {
-          //   boxSizing: 'border-box',
-          //   border: `2px solid red`,
-          //   borderRadius: '12px'
-          // },
-
-          // '&:disabled': {
-          //   boxSizing: 'border-box',
-          //   // border: `2px solid ${theme.palette.apes.kinglyCloud}`,
-          //   opacity: 0.6,
-          //   background: theme.palette.apes.white,
-          //   cursor: 'not-allowed',
-          //   '&:hover': {
-          //     boxSizing: 'border-box',
-          //     border: `2px solid ${theme.palette.apes.kinglyCloud}`
-          //   },
-          // },
-
           "& .Mui-disabled": {
             boxSizing: 'border-box',
-            // border: `2px solid ${theme.palette.apes.kinglyCloud}`,
             opacity: 0.6,
             background: theme.palette.apes.white,
             cursor: 'not-allowed',
