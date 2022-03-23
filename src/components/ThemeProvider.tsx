@@ -237,7 +237,7 @@ const theme = createTheme({
             '&:disabled': {
               color: theme.palette.apes.offBlack,
               background: theme.palette.apes.white,
-              border: `2px solid ${theme.palette.apes.palladium}`,
+              border: `2px solid ${theme.palette.apes.kinglyCloud}`,
               opacity: 0.6,
             }
           }),
