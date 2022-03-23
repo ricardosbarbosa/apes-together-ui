@@ -105,6 +105,29 @@ const theme = createTheme({
     },
     MuiChip: {
       styleOverrides: {
+        root: {
+          fontFamily: 'aktiv-grotesk, sans-serif',
+          fontStyle: 'normal',
+          fontWeight: '400',
+          fontSize: '12px',
+          lineHeight: '130%',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          // padding: '0px -1px 0px 0px',
+          letterSpacing: 'normal',
+          minHeight: '24px',
+          maxHeight: '24px',
+          borderRadius: '12px'
+        },
+        label: {
+          paddingLeft: '8px',
+          paddingRight: '10px',
+          letterSpacing: '0.01rem',
+          padding: '0px 8.5px 0px 8px',
+
+        },
         colorPrimary: {
           color: 'white !important'
         },
