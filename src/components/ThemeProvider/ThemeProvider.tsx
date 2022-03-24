@@ -109,7 +109,7 @@ const components: Components<Theme> = {
       root: {
         fontFamily: 'aktiv-grotesk, sans-serif',
         fontStyle: 'normal',
-        fontWeight: 'medium',
+        fontWeight: '500',
         fontSize: '12px',
         lineHeight: '130%',
         display: 'flex',
@@ -126,6 +126,7 @@ const components: Components<Theme> = {
         paddingRight: '10px',
         letterSpacing: '0.01rem',
         padding: '0px 8.5px 0px 8px',
+        fontWeight: '500',
       },
       colorPrimary: {
         color: 'white !important'
