@@ -52,20 +52,21 @@ export const Warning: ComponentStory<typeof Button> = (args) => (
     <Button {...args} variant='warning' children="Warning" disabled />
   </Stack>
 )
-export const ButtonSecondaryTrailingIcon: ComponentStory<typeof Button> = (args) => (
-  <Stack direction={'column'} spacing={5}>
-    <Button {...args} variant='secondary' children="Secondary" endIcon={<ArrowUpRight size={20} />} />
-    <Button {...args} variant='secondary' children="Hover" endIcon={<ArrowUpRight size={20} />} />
-    <Button {...args} variant='secondary' children="Focus" endIcon={<ArrowUpRight size={20} />} />
-    <Button {...args} variant='secondary' children="Disabled" endIcon={<ArrowUpRight size={20} />} disabled />
-  </Stack>
-)
 export const ButtonSecondaryLeadingIcon: ComponentStory<typeof Button> = (args) => (
   <Stack direction={'column'} spacing={5}>
     <Button {...args} variant='secondary' children="Secondary" startIcon={<Plus size={20} />} />
     <Button {...args} variant='secondary' children="Hover" startIcon={<Plus size={20} />} />
     <Button {...args} variant='secondary' children="Focus" startIcon={<Plus size={20} />} />
     <Button {...args} variant='secondary' children="Disabled" startIcon={<Plus size={20} />} disabled />
+  </Stack>
+)
+
+export const ButtonSecondaryTrailingIcon: ComponentStory<typeof Button> = (args) => (
+  <Stack direction={'column'} spacing={5}>
+    <Button {...args} variant='secondary' children="Secondary" endIcon={<ArrowUpRight size={20} />} />
+    <Button {...args} variant='secondary' children="Hover" endIcon={<ArrowUpRight size={20} />} />
+    <Button {...args} variant='secondary' children="Focus" endIcon={<ArrowUpRight size={20} />} />
+    <Button {...args} variant='secondary' children="Disabled" endIcon={<ArrowUpRight size={20} />} disabled />
   </Stack>
 )
 
