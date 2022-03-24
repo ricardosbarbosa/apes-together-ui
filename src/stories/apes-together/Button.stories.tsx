@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Button from '@mui/material/Button';
 
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
 import Stack from '@mui/material/Stack';
 // import IconButton from '@mui/material/IconButton';
 // import { ArrowUpRight, Plus, Trash } from 'phosphor-react';

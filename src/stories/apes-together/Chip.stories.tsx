@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Chip, Stack } from '@mui/material';
 import { CheckCircle, Prohibit } from 'phosphor-react';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
 
 export default {
   title: 'Components/Chip',

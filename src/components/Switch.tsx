@@ -1,18 +1,19 @@
 import { styled } from '@mui/system';
 import SwitchUnstyled, { switchUnstyledClasses, SwitchUnstyledProps } from '@mui/base/SwitchUnstyled';
+import { CSSProperties } from 'react';
 
-const blue = {
-  500: '#78CB8F',
+const green = {
+  normal: '#78CB8F',
+  hover: '#57B170',
 };
 
 const grey = {
-  400: '#DFDFDF',
-  500: '#AAB4BE',
-  600: '#6F7E8C',
+  normal: '#DFDFDF',
+  hover: '#B6B6B6',
 };
 
 const Root = styled('span')(
-  ({ theme }) => `
+  () => `
   font-size: 0;
   position: relative;
   display: inline-block;
@@ -21,19 +22,18 @@ const Root = styled('span')(
   margin: 10px;
   cursor: pointer;
 
-  &::hover {
-    & .${switchUnstyledClasses.track}{
-      background: #B6B6B6
-    }
-  }
-
   &.${switchUnstyledClasses.disabled} {
     opacity: 0.4;
     cursor: not-allowed;
+    &:hover {
+      & .${switchUnstyledClasses.track} {
+        background-color: ${grey['normal']};
+      }
+    }
   }
 
   & .${switchUnstyledClasses.track} {
-    background: ${theme.palette.mode === 'dark' ? grey[600] : grey[400]};
+    background: ${grey['normal']};
     border-radius: 30px;
     display: block;
     height: 100%;
@@ -44,7 +44,7 @@ const Root = styled('span')(
 
   &:hover {
     & .${switchUnstyledClasses.track} {
-      background-color: #B6B6B6;
+      background-color: ${grey['hover']};
     }
   }
 
@@ -76,18 +76,28 @@ const Root = styled('span')(
     }
 
     .${switchUnstyledClasses.track} {
-      background: ${blue[500]};
+      background: ${green['normal']};
     }
 
     &:hover {
       .${switchUnstyledClasses.track} {
-        background-color: #57B170;
+        background-color: ${green['hover']};
       }
     }
 
     &.${switchUnstyledClasses.focusVisible} {
       box-shadow: 0px 0px 0px 4px rgba(120, 203, 143, 0.24);
       border-radius: 16px;
+    }
+
+    &.${switchUnstyledClasses.disabled} {
+      opacity: 0.4;
+      cursor: not-allowed;
+      &:hover {
+        & .${switchUnstyledClasses.track} {
+          background-color: ${green['normal']};
+        }
+      }
     }
   }
 
@@ -105,7 +115,7 @@ const Root = styled('span')(
   `,
 );
 
-export default function Switch(props: SwitchUnstyledProps) {
+export default function Switch(props: SwitchUnstyledProps & { style?: CSSProperties | undefined }) {
   return (
     <SwitchUnstyled component={Root} {...props} />
   );

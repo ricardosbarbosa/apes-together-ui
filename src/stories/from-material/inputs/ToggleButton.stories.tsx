@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ToggleButtonGroup, ToggleButton } from '@mui/material';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../../components/ThemeProvider/ThemeProvider';
 import { TextAlignCenter, TextAlignJustify, TextAlignLeft, TextAlignRight } from 'phosphor-react';
 
 export default {

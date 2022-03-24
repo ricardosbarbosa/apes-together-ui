@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
 import { MenuItem, Select, Stack } from '@mui/material';
 import { Heartbeat } from 'phosphor-react';
 
