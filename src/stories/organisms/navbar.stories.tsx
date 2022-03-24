@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
 import { AppBar, Tab } from '@mui/material';
 import NavBar from '../../components/NavBar';
 import React, { useMemo } from 'react';

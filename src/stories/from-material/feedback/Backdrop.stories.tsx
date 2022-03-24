@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Backdrop, Button, CircularProgress, Stack } from '@mui/material';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../../components/ThemeProvider/ThemeProvider';
 
 export default {
   title: 'Others/feedback/Backdrop',

@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TextField, Stack, InputAdornment } from '@mui/material';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
 import { Clock } from 'phosphor-react';
 
 export default {

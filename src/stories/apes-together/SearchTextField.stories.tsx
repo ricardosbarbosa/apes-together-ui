@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TextField, Stack } from '@mui/material';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
 import { SearchTextField } from '../../components';
 import { useState } from 'react';
 

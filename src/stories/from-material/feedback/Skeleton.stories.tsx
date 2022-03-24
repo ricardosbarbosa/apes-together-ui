@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Box, Grid, Skeleton, Stack, Typography } from '@mui/material';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../../components/ThemeProvider/ThemeProvider';
 
 export default {
   title: 'Others/feedback/Skeleton',

@@ -1,4 +1,4 @@
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../../components/ThemeProvider/ThemeProvider';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { ComponentStory, ComponentMeta } from '@storybook/react';

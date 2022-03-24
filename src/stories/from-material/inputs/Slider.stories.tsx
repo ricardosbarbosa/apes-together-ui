@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Box, Slider, Stack } from '@mui/material';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../../components/ThemeProvider/ThemeProvider';
 import { SpeakerHigh, SpeakerLow } from 'phosphor-react';
 
 export default {

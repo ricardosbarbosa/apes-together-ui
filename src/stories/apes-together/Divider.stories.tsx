@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Divider } from '@mui/material';
-import ThemeProvider from '../../components/ThemeProvider';
+import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
 
 
 

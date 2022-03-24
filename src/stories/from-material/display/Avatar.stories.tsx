@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Avatar, AvatarGroup, Badge, Stack, styled } from '@mui/material';
-import ThemeProvider from '../../../components/ThemeProvider';
+import ThemeProvider from '../../../components/ThemeProvider/ThemeProvider';
 import { deepOrange, deepPurple, green, pink } from '@mui/material/colors';
 import { File, Folder, HeartBreak } from 'phosphor-react';
 
