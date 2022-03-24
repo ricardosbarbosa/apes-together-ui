@@ -8,7 +8,7 @@ declare module '@mui/material/styles' {
   interface Palette {
     apes: {
       purplePleasure: Palette['primary'];
-      creamyCoral: React.CSSProperties['color'];
+      creamyCoral: Palette['primary'];
       serengetiGreen: React.CSSProperties['color'];
       offBlack: React.CSSProperties['color'];
       argent: React.CSSProperties['color'];
@@ -21,7 +21,7 @@ declare module '@mui/material/styles' {
   interface PaletteOptions {
     apes: {
       purplePleasure: PaletteOptions['primary'];
-      creamyCoral: React.CSSProperties['color'];
+      creamyCoral: PaletteOptions['primary'];
       serengetiGreen: React.CSSProperties['color'];
       offBlack: React.CSSProperties['color'];
       argent: React.CSSProperties['color'];
@@ -37,6 +37,7 @@ declare module '@mui/material/Button' {
   interface ButtonPropsVariantOverrides {
     primary: true;
     secondary: true;
+    warning: true;
     outlined: false;
     contained: false;
     text: false
@@ -54,7 +55,11 @@ const palette: PaletteOptions = {
       light: 'rgba(126, 74, 155, 0.12)',
       dark: '#612B80'
     },
-    creamyCoral: '#E2778A',
+    creamyCoral: {
+      main: '#E2778A',
+      light: 'rgba(226, 119, 138, 0.16)',
+      dark: '#CB6678'
+    },
     serengetiGreen: '#78CB8F',
     offBlack: '#303030',
     argent: '#888888',
@@ -263,6 +268,42 @@ const components: Components<Theme> = {
             border: `2px solid ${theme.palette.apes.kinglyCloud}`,
             opacity: 0.6,
           }
+        }),
+      },
+      {
+        props: { variant: 'warning' },
+        style: ({ theme }: { theme: Theme }) => ({
+          color: theme.palette.common.white,
+          border: `2px solid ${theme.palette.apes.creamyCoral.main}`,
+          background: theme.palette.apes.creamyCoral.main,
+          fontFamily: 'aktiv-grotesk, sans-serif !important',
+          fontStyle: 'normal',
+          fontWeight: 700,
+          lineHeight: '16.9px',
+          textAlign: 'center',
+          fontSize: '13px',
+          height: '52px',
+          maxWidth: '256px',
+          minWidth: '256px',
+          '&:hover': {
+            border: `2px solid ${theme.palette.apes.creamyCoral.dark}`,
+            background: theme.palette.apes.creamyCoral.dark,
+            color: theme.palette.common.white,
+          },
+          '&:focus': {
+            boxSizing: 'border-box',
+            boxShadow: `0px 0px 0px 4px ${theme.palette.apes.creamyCoral.light}`,
+            border: `2px solid ${theme.palette.apes.creamyCoral.main}`,
+            background: theme.palette.apes.creamyCoral.main,
+            color: theme.palette.common.white,
+          },
+
+          '&:disabled': {
+            border: `2px solid ${theme.palette.apes.creamyCoral.main} `,
+            background: theme.palette.apes.creamyCoral.main,
+            color: theme.palette.common.white,
+            opacity: 0.4,
+          },
         }),
       },
     ],

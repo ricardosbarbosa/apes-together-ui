@@ -44,6 +44,14 @@ export const Secondary: ComponentStory<typeof Button> = (args) => (
   </Stack>
 )
 
+export const Warning: ComponentStory<typeof Button> = (args) => (
+  <Stack direction={'column'} spacing={5}>
+    <Button {...args} variant='warning' children="Warning" />
+    <Button {...args} variant='warning' children="Warning" />
+    <Button {...args} variant='warning' children="Warning" />
+    <Button {...args} variant='warning' children="Warning" disabled />
+  </Stack>
+)
 // export const RightIcon = Playground.bind({});
 // RightIcon.args = {
 //   endIcon: <ArrowUpRight size={20} />,
