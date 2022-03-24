@@ -244,6 +244,9 @@ const components: Components<Theme> = {
           color: theme.palette.apes.offBlack,
           background: theme.palette.apes.white,
           border: `2px solid ${theme.palette.apes.kinglyCloud}`,
+          '& .MuiButton-startIcon,.MuiButton-endIcon': {
+            color: theme.palette.apes.palladium,
+          },
           '&:hover': {
             color: theme.palette.apes.offBlack,
             border: `2px solid ${theme.palette.apes.palladium}`,
@@ -267,6 +270,9 @@ const components: Components<Theme> = {
             background: theme.palette.apes.white,
             border: `2px solid ${theme.palette.apes.kinglyCloud}`,
             opacity: 0.6,
+            '& .MuiButton-startIcon,.MuiButton-endIcon': {
+              color: theme.palette.apes.palladium,
+            }
           }
         }),
       },
