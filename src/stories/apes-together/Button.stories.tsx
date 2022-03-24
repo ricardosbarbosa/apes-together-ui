@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
 import Stack from '@mui/material/Stack';
 // import IconButton from '@mui/material/IconButton';
-// import { ArrowUpRight, Plus, Trash } from 'phosphor-react';
+import { ArrowUpRight, Plus } from 'phosphor-react';
 
 export default {
   title: 'Components/Button',
@@ -44,19 +44,30 @@ export const Secondary: ComponentStory<typeof Button> = (args) => (
   </Stack>
 )
 
-// export const RightIcon = Playground.bind({});
-// RightIcon.args = {
-//   endIcon: <ArrowUpRight size={20} />,
-//   variant: 'secondary',
-//   children: 'secondary'
-// };
-
-// export const LeftIcon = Playground.bind({});
-// LeftIcon.args = {
-//   startIcon: <Plus size={20} />,
-//   variant: 'secondary',
-//   children: 'secondary'
-// };
+export const Warning: ComponentStory<typeof Button> = (args) => (
+  <Stack direction={'column'} spacing={5}>
+    <Button {...args} variant='warning' children="Warning" />
+    <Button {...args} variant='warning' children="Warning" />
+    <Button {...args} variant='warning' children="Warning" />
+    <Button {...args} variant='warning' children="Warning" disabled />
+  </Stack>
+)
+export const ButtonSecondaryTrailingIcon: ComponentStory<typeof Button> = (args) => (
+  <Stack direction={'column'} spacing={5}>
+    <Button {...args} variant='secondary' children="Secondary" endIcon={<ArrowUpRight size={20} />} />
+    <Button {...args} variant='secondary' children="Hover" endIcon={<ArrowUpRight size={20} />} />
+    <Button {...args} variant='secondary' children="Focus" endIcon={<ArrowUpRight size={20} />} />
+    <Button {...args} variant='secondary' children="Disabled" endIcon={<ArrowUpRight size={20} />} disabled />
+  </Stack>
+)
+export const ButtonSecondaryLeadingIcon: ComponentStory<typeof Button> = (args) => (
+  <Stack direction={'column'} spacing={5}>
+    <Button {...args} variant='secondary' children="Secondary" startIcon={<Plus size={20} />} />
+    <Button {...args} variant='secondary' children="Hover" startIcon={<Plus size={20} />} />
+    <Button {...args} variant='secondary' children="Focus" startIcon={<Plus size={20} />} />
+    <Button {...args} variant='secondary' children="Disabled" startIcon={<Plus size={20} />} disabled />
+  </Stack>
+)
 
 // const PlaygroundIconButton: ComponentStory<typeof Button> = (args) => <IconButton {...args} />;
 // PlaygroundIconButton.args = {}
