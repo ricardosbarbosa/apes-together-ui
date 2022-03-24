@@ -3,8 +3,8 @@ import Button from '@mui/material/Button';
 
 import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
 import Stack from '@mui/material/Stack';
-// import IconButton from '@mui/material/IconButton';
-import { ArrowUpRight, Plus } from 'phosphor-react';
+import IconButton from '@mui/material/IconButton';
+import { ArrowUpRight, Plus, Trash } from 'phosphor-react';
 
 export default {
   title: 'Components/Button',
@@ -70,16 +70,11 @@ export const ButtonSecondaryTrailingIcon: ComponentStory<typeof Button> = (args)
   </Stack>
 )
 
-// const PlaygroundIconButton: ComponentStory<typeof Button> = (args) => <IconButton {...args} />;
-// PlaygroundIconButton.args = {}
-
-// export const Icon = PlaygroundIconButton.bind({});
-// Icon.args = {
-//   children: <Trash />,
-// };
-
-// export const DisabledIcon = PlaygroundIconButton.bind({});
-// DisabledIcon.args = {
-//   children: <Trash />,
-//   disabled: true
-// };
+export const IconsButtons: ComponentStory<typeof IconButton> = (args) => (
+  <Stack direction={'column'} spacing={5}>
+    <IconButton {...args} children={<Trash size={20} />} />
+    <IconButton {...args} children={<Trash size={20} />} />
+    <IconButton {...args} children={<Trash size={20} />} />
+    <IconButton {...args} children={<Trash size={20} />} disabled />
+  </Stack>
+)

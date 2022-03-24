@@ -143,7 +143,9 @@ const components: Components<Theme> = {
   },
   MuiIconButton: {
     defaultProps: {
-      disableFocusRipple: true
+      disableFocusRipple: true,
+      disableRipple: true,
+      disableTouchRipple: true,
     },
     styleOverrides: {
       root: ({ theme }: { theme: Theme }) => {
@@ -157,7 +159,7 @@ const components: Components<Theme> = {
           color: theme.palette.apes.palladium,
           background: '#FFFFF',
           border: `2px solid ${theme.palette.apes.kinglyCloud}`,
-
+          transition: '0.3s',
           '&:hover': {
             border: `2px solid ${theme.palette.apes.palladium}`,
             color: theme.palette.apes.purplePleasure.main,
