@@ -454,7 +454,7 @@ const components: Components<Theme> = {
             border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
             "& .MuiInputAdornment-root": {
               '& *': {
-                color: theme.palette.apes.purplePleasure.main,
+                // color: theme.palette.apes.purplePleasure.main,
               },
             }
           },
@@ -482,29 +482,34 @@ const components: Components<Theme> = {
   },
   MuiInputAdornment: {
     styleOverrides: {
+
       positionStart: ({ theme }: { theme: Theme }) => ({
         borderTopLeftRadius: '12px',
         borderBottomLeftRadius: '12px',
         background: 'white',
         position: 'relative',
-        padding: '24px 16px',
+        padding: '24px 12px',
         marginLeft: '-14px',
+        marginRight: '17px',
+        color: theme.palette.apes.argent,
+        letterSpacing: 'normal',
 
-        '&:hover': {
-          '& *': {
-            color: theme.palette.apes.purplePleasure.main,
-          },
-        },
+        // '&:hover': {
+        //   '& *': {
+        //     color: theme.palette.apes.purplePleasure.main,
+        //   },
+        // },
       }),
-      positionEnd: {
+      positionEnd: ({ theme }: { theme: Theme }) => ({
         borderTopRightRadius: '12px',
         borderBottomRightRadius: '12px',
         background: 'white',
         position: 'relative',
-        padding: '24px 16px',
+        padding: '24px 12px',
         marginRight: '-14px',
-
-      }
+        color: theme.palette.apes.argent,
+        letterSpacing: 'normal'
+      })
     }
   },
 
