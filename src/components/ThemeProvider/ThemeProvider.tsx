@@ -402,16 +402,21 @@ const components: Components<Theme> = {
     styleOverrides: {
       input: ({ theme }: { theme: Theme }) => ({
         height: '52px',
-
+        transition: '0.3s',
+        fontSize: '15px',
         '&::placeholder': {
           textOverflow: 'ellipsis',
           color: theme.palette.apes.argent,
         },
+
       }),
+
       root: ({ theme }: { theme: Theme }) => ({
         backgroundColor: theme.palette.apes.bleachedSilk,
         color: theme.palette.apes.offBlack,
         height: '52px',
+        minWidth: '392px',
+        transition: '0.3s',
         border: `2px solid ${theme.palette.apes.bleachedSilk}`,
 
         '&:focus': {
@@ -419,17 +424,20 @@ const components: Components<Theme> = {
           boxSizing: 'border-box',
           boxShadow: `0px 0px 0px 4px ${theme.palette.apes.purplePleasure.light}`,
         },
-        '&:hover.Mui-disabled': {
-          border: `2px solid ${theme.palette.apes.bleachedSilk}`,
-        },
+
       }),
     }
   },
   MuiTextField: {
     styleOverrides: {
       root: ({ theme }: { theme: Theme }) => ({
+        transition: '0.3s',
         ".MuiInputBase-multiline": {
-          height: 'auto'
+          height: '100%',
+          "&.MuiOutlinedInput-root": {
+            padding: '0 13px 11px 13px',
+            letterSpacing: 'normal',
+          },
         },
         "& .MuiOutlinedInput-root.Mui-focused": {
           border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
@@ -451,17 +459,23 @@ const components: Components<Theme> = {
             }
           },
         },
-        "& .MuiOutlinedInput-root.Mui-error": {
-          border: `2px solid ${theme.palette.apes.creamyCoral}`,
+        "& .MuiOutlinedInput-root.Mui-disabled": {
+          border: `2px solid ${theme.palette.apes.bleachedSilk}`,
           '&:hover': {
-            border: `2px solid ${theme.palette.apes.creamyCoral}`,
+            border: `2px solid ${theme.palette.apes.bleachedSilk}`,
           },
         },
-        "& .MuiOutlinedInput-root.Mui-focused.Mui-error": {
-          border: `2px solid ${theme.palette.apes.creamyCoral}`,
-          boxSizing: 'border-box',
-          boxShadow: `0px 0px 0px 4px rgba(226, 119, 138, 0.16)`,
-          borderRadius: '12px'
+        "& .MuiOutlinedInput-root.Mui-error": {
+          border: `2px solid ${theme.palette.apes.creamyCoral.main}`,
+          '&:hover': {
+            border: `2px solid ${theme.palette.apes.creamyCoral.main}`,
+          },
+          '&:focus': {
+            border: `2px solid ${theme.palette.apes.creamyCoral.main}`,
+            boxSizing: 'border-box',
+            boxShadow: `0px 0px 0px 4px rgba(226, 119, 138, 0.16)`,
+            borderRadius: '12px'
+          },
         },
       })
     }
