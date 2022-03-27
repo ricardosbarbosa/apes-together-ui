@@ -449,12 +449,19 @@ const components: Components<Theme> = {
           background: 'transparent'
         },
         "& .MuiOutlinedInput-root": {
-
+          '&:focus': {
+            border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
+            "& .MuiInputAdornment-positionEnd": {
+              '& *': {
+                color: theme.palette.apes.purplePleasure.main,
+              },
+            }
+          },
           '&:hover': {
             border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
-            "& .MuiInputAdornment-root": {
+            "& .MuiInputAdornment-positionEnd": {
               '& *': {
-                // color: theme.palette.apes.purplePleasure.main,
+                color: theme.palette.apes.purplePleasure.main,
               },
             }
           },
@@ -474,7 +481,8 @@ const components: Components<Theme> = {
             border: `2px solid ${theme.palette.apes.creamyCoral.main}`,
             boxSizing: 'border-box',
             boxShadow: `0px 0px 0px 4px rgba(226, 119, 138, 0.16)`,
-            borderRadius: '12px'
+            borderRadius: '12px',
+
           },
         },
       })
@@ -491,7 +499,7 @@ const components: Components<Theme> = {
         padding: '24px 12px',
         marginLeft: '-14px',
         marginRight: '17px',
-        color: theme.palette.apes.argent,
+        color: theme.palette.apes.palladium,
         letterSpacing: 'normal',
 
         // '&:hover': {
@@ -505,9 +513,9 @@ const components: Components<Theme> = {
         borderBottomRightRadius: '12px',
         background: 'white',
         position: 'relative',
-        padding: '24px 12px',
+        padding: '24px 14px 24px 14px',
         marginRight: '-14px',
-        color: theme.palette.apes.argent,
+        color: theme.palette.apes.palladium,
         letterSpacing: 'normal'
       })
     }
