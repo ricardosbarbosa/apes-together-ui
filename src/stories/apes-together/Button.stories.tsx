@@ -4,7 +4,8 @@ import Button from '@mui/material/Button';
 import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
-import { ArrowUpRight, Plus, Trash } from 'phosphor-react';
+import { ArrowUpRight, CircleNotch, Plus, Trash } from 'phosphor-react';
+import { useTheme } from '@mui/material/styles';
 
 export default {
   title: 'Components/Button',
@@ -78,3 +79,49 @@ export const IconsButtons: ComponentStory<typeof IconButton> = (args) => (
     <IconButton {...args} children={<Trash size={20} />} disabled />
   </Stack>
 )
+
+export const LoadingButtons: ComponentStory<typeof Button> = (args) => {
+  const theme = useTheme()
+  return (
+    <Stack direction={'column'} spacing={5}>
+      <Button
+        {...args}
+        variant="primary" children={"Primary"}
+        disabled
+        startIcon={
+          <CircleNotch size={20}>
+            {/* <WarningCircle size={28}  weight="fill" /> */}
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              dur="1s"
+              from="0 0 0"
+              to="360 0 0"
+              repeatCount="indefinite"
+            />
+          </CircleNotch>
+        }
+      />
+      <Button
+        {...args}
+        variant="secondary" children={"Secondary"}
+        disabled
+        startIcon={
+          <CircleNotch size={20} color={theme.palette.apes.serengetiGreen}>
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              dur="1s"
+              from="0 0 0"
+              to="360 0 0"
+              repeatCount="indefinite"
+            />
+          </CircleNotch>
+        }
+      />
+
+    </Stack>
+  )
+}
