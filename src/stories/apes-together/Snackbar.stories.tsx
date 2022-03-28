@@ -60,8 +60,8 @@ export const Snackbars: ComponentStory<typeof Snackbar> = () => {
           vertical: 'bottom'
         }}
       >
-        <MuiAlert onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
-          This is a message!
+        <MuiAlert onClose={handleClose} severity={severity} sx={{ width: '100%' }} title="This is a message! This is a message!This is a message! This is a message! This is a message! This is a message!">
+          This is a message! This is a message!This is a message! This is a message! This is a message! This is a message!
         </MuiAlert>
       </Snackbar>
     </Stack >

@@ -12,9 +12,9 @@ const MuiSnackbar: {
   variants?: ComponentsVariants['MuiSnackbar'];
 } = {
   styleOverrides: {
-    root: {
-      
-    }
+    root: () => ({
+        margin: "0 !important"
+    })
   }
 }
   

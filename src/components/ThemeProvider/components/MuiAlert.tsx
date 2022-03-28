@@ -36,7 +36,7 @@ const MuiAlert: {
       style: ({ theme }: { theme: Theme }) => ({
         '& .MuiAlert-icon': {
           color: `${theme.palette.apes.serengetiGreen} !important`
-        }
+        },
       }),
     },
     {
@@ -58,8 +58,16 @@ const MuiAlert: {
   ],
   styleOverrides: {
     root: ({ theme }: { theme: Theme }) => ({
-      width: '400px',
+      minWidth: '400px',
+      maxWidth: '400px',
       height: '68px',
+      paddingLeft: 22,
+      [theme.breakpoints.down('md')]: {
+        height: '52px',
+        width: '100%',
+        paddingLeft: 17,
+      },
+
       background: '#FFFFFF',
       /* kingly-cloud */
       border: '2px solid #DFDFDF',
@@ -73,10 +81,10 @@ const MuiAlert: {
       // fontFamily: 'Aktiv Grotesk Corp';
       fontFamily: 'aktiv-grotesk, sans-serif',
       fontStyle: 'normal',
-      fontWeight: 400,
+      fontWeight: 500,
       fontSize: '15px',
       lineHeight: '130%',
-      paddingLeft: 22,
+
       /* or 19px */
 
       '&:hover': {
@@ -95,7 +103,12 @@ const MuiAlert: {
     }),
     message: ({ theme }: { theme: Theme }) => ({
       color: theme.palette.apes.offBlack,
-      padding: 0
+      padding: 0,
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      display: '-webkit-box',
+      '-webkit-line-clamp': '2',
+      '-webkit-box-orient': 'vertical',
     }),
     icon: {
       marginRight: 17
