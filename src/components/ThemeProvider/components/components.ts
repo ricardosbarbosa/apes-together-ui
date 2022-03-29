@@ -3,6 +3,8 @@ import { Theme } from '@mui/material/styles';
 
 import MuiButton from './MuiButton'
 import {MuiTabs, MuiTab} from './MuiTabs'
+import MuiAlert from './MuiAlert'
+import MuiSnackbar from './MuiSnackbar'
 
 const components: Components<Theme> = {
   MuiCssBaseline: {
@@ -287,7 +289,8 @@ const components: Components<Theme> = {
       })
     }
   },
-
+  MuiSnackbar,
+  MuiAlert
 }
 
 export default components
