@@ -1,10 +1,11 @@
 import type { Components } from '@mui/material';
 import { Theme } from '@mui/material/styles';
 
-import MuiButton from './MuiButton'
 import {MuiTabs, MuiTab} from './MuiTabs'
 import MuiAlert from './MuiAlert'
 import MuiSnackbar from './MuiSnackbar'
+import MuiSelect from './MuiSelect'
+import MuiButton from './MuiButton_'
 
 const components: Components<Theme> = {
   MuiCssBaseline: {
@@ -23,6 +24,7 @@ const components: Components<Theme> = {
   },
   MuiTabs,
   MuiTab,
+  MuiSelect,
   MuiDivider: {
     styleOverrides: {
       root: ({ theme }: { theme: Theme }) => ({
@@ -102,72 +104,24 @@ const components: Components<Theme> = {
           },
         })
       },
-      sizeLarge: {
-        fontSize: '36px',
-        height: '60px',
-        width: '60px',
-      },
-      sizeMedium: {
-        fontSize: '28px',
-        height: '52px',
-        width: '52px',
-      },
-      sizeSmall: {
-        fontSize: '20px',
-        height: '44px',
-        width: '44px',
-      },
+      // sizeLarge: {
+      //   fontSize: '36px',
+      //   height: '60px',
+      //   width: '60px',
+      // },
+      // sizeMedium: {
+      //   fontSize: '28px',
+      //   height: '52px',
+      //   width: '52px',
+      // },
+      // sizeSmall: {
+      //   fontSize: '20px',
+      //   height: '44px',
+      //   width: '44px',
+      // },
     }
   },
   MuiButton,
-  MuiSelect: {
-    styleOverrides: {
-
-      select: ({ theme }: { theme: Theme }) => ({
-        minWidth: '252px',
-        boxSizing: 'border-box',
-        height: '52px',
-        background: theme.palette.apes.white,
-        border: `2px solid  ${theme.palette.apes.kinglyCloud}`,
-        padding: '14px 14px',
-
-        '&:focus': {
-          boxSizing: 'border-box',
-          boxShadow: `0px 0px 0px 4px ${theme.palette.apes.purplePleasure.light}`,
-          border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
-        },
-        '&:hover': {
-          boxSizing: 'border-box',
-          border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
-        },
-      }),
-      // @ts-ignore
-      root: ({ theme }: { theme: Theme }) => ({
-        background: theme.palette.apes.white,
-        border: `2px solid ${theme.palette.apes.white}`,
-        '&:hover': {
-          boxSizing: 'border-box',
-          border: `2px solid ${theme.palette.apes.white} !important`,
-        },
-
-        '&:hover:not': {
-          boxSizing: 'border-box',
-          border: `2px solid red`,
-        },
-        "& .Mui-disabled": {
-          boxSizing: 'border-box',
-          opacity: 0.6,
-          background: theme.palette.apes.white,
-          cursor: 'not-allowed',
-          color: `${theme.palette.apes.offBlack}`,
-          '&:hover': {
-            boxSizing: 'border-box',
-            border: `2px solid ${theme.palette.apes.kinglyCloud}`
-          },
-        },
-      }),
-    }
-  },
   MuiOutlinedInput: {
     styleOverrides: {
       notchedOutline: {
@@ -179,6 +133,7 @@ const components: Components<Theme> = {
     styleOverrides: {
       input: ({ theme }: { theme: Theme }) => ({
         height: '52px',
+        width: '100%',
         transition: '0.3s',
         fontSize: '15px',
         '&::placeholder': {
@@ -192,7 +147,7 @@ const components: Components<Theme> = {
         backgroundColor: theme.palette.apes.bleachedSilk,
         color: theme.palette.apes.offBlack,
         height: '52px',
-        minWidth: '392px',
+        width: '100%',
         transition: '0.3s',
         border: `2px solid ${theme.palette.apes.bleachedSilk}`,
 
@@ -209,6 +164,8 @@ const components: Components<Theme> = {
     styleOverrides: {
       root: ({ theme }: { theme: Theme }) => ({
         transition: '0.3s',
+        width: '100%',
+
         ".MuiInputBase-multiline": {
           height: '100%',
           "&.MuiOutlinedInput-root": {
