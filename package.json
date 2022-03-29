@@ -43,7 +43,7 @@
     "build-storybook": "build-storybook -s public",
     "storybook-docs": "start-storybook --docs --no-manager-cache",
     "build-storybook-docs": "build-storybook --docs",
-    "format": "yarn lint -- --fix",
+    "format": "npm run lint -- --fix",
     "lint": "eslint . --ext ts --ext tsx --ext js"
   },
   "eslintConfig": {
