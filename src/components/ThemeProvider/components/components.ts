@@ -2,6 +2,7 @@ import type { Components } from '@mui/material';
 import { Theme } from '@mui/material/styles';
 
 import MuiButton from './MuiButton'
+import {MuiTabs, MuiTab} from './MuiTabs'
 
 const components: Components<Theme> = {
   MuiCssBaseline: {
@@ -18,6 +19,8 @@ const components: Components<Theme> = {
 
     }
   },
+  MuiTabs,
+  MuiTab,
   MuiDivider: {
     styleOverrides: {
       root: ({ theme }: { theme: Theme }) => ({
