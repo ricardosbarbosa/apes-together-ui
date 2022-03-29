@@ -2,7 +2,9 @@ import { InputAdornment, TextField, TextFieldProps } from "@mui/material"
 import { MagnifyingGlass, XCircle } from "phosphor-react"
 import { useRef } from "react"
 
-function SearchTextField({ value, defaultValue, onChange, ...props }: TextFieldProps) {
+export type SearchTextFieldProps = TextFieldProps
+
+function SearchTextField({ value, defaultValue, onChange, ...props }: SearchTextFieldProps) {
   const ref = useRef<HTMLInputElement>()
   return (
     <TextField

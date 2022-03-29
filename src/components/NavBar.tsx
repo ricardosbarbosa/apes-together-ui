@@ -3,12 +3,12 @@ import { AppBar, Toolbar, Container, Box } from '@mui/material'
 import React from 'react'
 import OsirisLogo from './OsirisLogo'
 
-export type NavBarProps = {
+export type NavBarProps = React.PropsWithChildren<{
   value: string,
   rightSpot?: React.ReactNode
-}
+}>
 
-export default function NavBar(props: React.PropsWithChildren<NavBarProps>) {
+export default function NavBar(props: NavBarProps) {
   const { value, rightSpot, children } = props
 
   return (
