@@ -6,8 +6,7 @@ import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 
 const packageJson = require("./package.json");
-
-export default [
+const config = [
   {
     input: "src/index.ts",
     output: [
@@ -36,3 +35,4 @@ export default [
     external: [/\.css$/],
   },
 ];
+export default config

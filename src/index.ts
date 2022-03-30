@@ -18,6 +18,7 @@ export { SpeedDial } from '@mui/material'
 export { SpeedDialIcon } from '@mui/material'
 export { ToggleButton } from '@mui/material'
 export { ToggleButtonGroup } from '@mui/material'
+export { useAutocomplete } from '@mui/material'
 export * from "@mui/lab"
 export { SpeedDialAction as SpeedDialActionLab } from "@mui/lab"
 export { Alert as AlertLab } from '@mui/lab'
@@ -32,3 +33,4 @@ export { SpeedDial as SpeedDialLab } from '@mui/lab'
 export { SpeedDialIcon as SpeedDialIconLab } from '@mui/lab'
 export { ToggleButton as ToggleButtonLab } from '@mui/lab'
 export { ToggleButtonGroup as ToggleButtonGroupLab } from '@mui/lab'
+export { useAutocomplete as useAutocompleteLab } from '@mui/lab'
