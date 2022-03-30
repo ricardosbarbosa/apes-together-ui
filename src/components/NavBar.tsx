@@ -44,9 +44,9 @@ export default function NavBar(props: NavBarProps) {
           </Box>
           <Container sx={ContainerSx}>{children}</Container>
           <Box sx={RightSpotSx}>{rightSpot}</Box>
-        </Toolbar>
+        </Toolbar >
         <Box sx={BorderSx} />
-      </AppBar>
-    </TabContext>
+      </AppBar >
+    </TabContext >
   );
 }
