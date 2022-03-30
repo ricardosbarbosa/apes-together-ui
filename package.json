@@ -26,8 +26,7 @@
     "publish": "npx semantic-release --no-ci"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+  
   },
   "dependencies": {
     "@babel/core": "^7.17.8",
