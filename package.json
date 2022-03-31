@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/apes-together-xyz"
   },
-  "version": "0.0.38",
+  "version": "0.0.39",
   "private": false,
   "main": "index.js",
   "module": "index.esm.js",
