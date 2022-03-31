@@ -1,25 +1,25 @@
 import type { Components } from '@mui/material';
 import { Theme } from '@mui/material/styles';
 
-import MuiButton from './MuiButton'
-import {MuiTabs, MuiTab} from './MuiTabs'
-import MuiAlert from './MuiAlert'
-import MuiSnackbar from './MuiSnackbar'
+import MuiButton from './MuiButton';
+import { MuiTabs, MuiTab } from './MuiTabs';
+import MuiAlert from './MuiAlert';
+import MuiSnackbar from './MuiSnackbar';
 
 const components: Components<Theme> = {
   MuiCssBaseline: {
     styleOverrides: {
       transitionDuration: '300',
       transition: 'ease-in-out',
-      'input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration': {
-        display: 'none'
-      },
-      "& .Mui-disabled": {
+      'input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration':
+        {
+          display: 'none',
+        },
+      '& .Mui-disabled': {
         pointerEvents: 'all !important',
-        cursor: 'not-allowed !important'
+        cursor: 'not-allowed !important',
       },
-
-    }
+    },
   },
   MuiTabs,
   MuiTab,
@@ -27,9 +27,9 @@ const components: Components<Theme> = {
     styleOverrides: {
       root: ({ theme }: { theme: Theme }) => ({
         borderColor: theme.palette.apes.bleachedSilk,
-        borderWidth: "1px"
-      })
-    }
+        borderWidth: '1px',
+      }),
+    },
   },
   MuiChip: {
     styleOverrides: {
@@ -46,7 +46,7 @@ const components: Components<Theme> = {
         letterSpacing: 'normal',
         minHeight: '24px',
         maxHeight: '24px',
-        borderRadius: '12px'
+        borderRadius: '12px',
       },
       label: {
         paddingLeft: '8px',
@@ -56,12 +56,12 @@ const components: Components<Theme> = {
         fontWeight: '500',
       },
       colorPrimary: {
-        color: 'white !important'
+        color: 'white !important',
       },
       colorSecondary: {
-        color: 'white'
-      }
-    }
+        color: 'white',
+      },
+    },
   },
   MuiIconButton: {
     defaultProps: {
@@ -71,7 +71,7 @@ const components: Components<Theme> = {
     },
     styleOverrides: {
       root: ({ theme }: { theme: Theme }) => {
-        return ({
+        return {
           fontFamily: 'aktiv-grotesk, sans-serif',
           fontStyle: 'normal',
           fontWeight: 600,
@@ -85,22 +85,22 @@ const components: Components<Theme> = {
           '&:hover': {
             border: `2px solid ${theme.palette.apes.palladium}`,
             color: theme.palette.apes.purplePleasure.main,
-            background: theme.palette.apes.white
+            background: theme.palette.apes.white,
           },
           '&:focus': {
             color: theme.palette.apes.purplePleasure.main,
             border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
             boxSizing: 'border-box',
             boxShadow: `0px 0px 0px 4px ${theme.palette.apes.purplePleasure.light}`,
-            background: theme.palette.apes.white
+            background: theme.palette.apes.white,
           },
           '&:disabled': {
             background: theme.palette.apes.white,
             color: theme.palette.apes.palladium,
             border: `2px solid ${theme.palette.apes.kinglyCloud}`,
-            opacity: '0.6'
+            opacity: '0.6',
           },
-        })
+        };
       },
       sizeLarge: {
         fontSize: '36px',
@@ -117,12 +117,11 @@ const components: Components<Theme> = {
         height: '44px',
         width: '44px',
       },
-    }
+    },
   },
   MuiButton,
   MuiSelect: {
     styleOverrides: {
-
       select: ({ theme }: { theme: Theme }) => ({
         minWidth: '252px',
         boxSizing: 'border-box',
@@ -141,6 +140,7 @@ const components: Components<Theme> = {
           border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
         },
       }),
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       root: ({ theme }: { theme: Theme }) => ({
         background: theme.palette.apes.white,
@@ -154,7 +154,7 @@ const components: Components<Theme> = {
           boxSizing: 'border-box',
           border: `2px solid red`,
         },
-        "& .Mui-disabled": {
+        '& .Mui-disabled': {
           boxSizing: 'border-box',
           opacity: 0.6,
           background: theme.palette.apes.white,
@@ -162,18 +162,18 @@ const components: Components<Theme> = {
           color: `${theme.palette.apes.offBlack}`,
           '&:hover': {
             boxSizing: 'border-box',
-            border: `2px solid ${theme.palette.apes.kinglyCloud}`
+            border: `2px solid ${theme.palette.apes.kinglyCloud}`,
           },
         },
       }),
-    }
+    },
   },
   MuiOutlinedInput: {
     styleOverrides: {
       notchedOutline: {
-        border: 'none'
-      }
-    }
+        border: 'none',
+      },
+    },
   },
   MuiInputBase: {
     styleOverrides: {
@@ -185,7 +185,6 @@ const components: Components<Theme> = {
           textOverflow: 'ellipsis',
           color: theme.palette.apes.argent,
         },
-
       }),
 
       root: ({ theme }: { theme: Theme }) => ({
@@ -201,48 +200,46 @@ const components: Components<Theme> = {
           boxSizing: 'border-box',
           boxShadow: `0px 0px 0px 4px ${theme.palette.apes.purplePleasure.light}`,
         },
-
       }),
-    }
+    },
   },
   MuiTextField: {
     styleOverrides: {
       root: ({ theme }: { theme: Theme }) => ({
         transition: '0.3s',
-        ".MuiInputBase-multiline": {
+        '.MuiInputBase-multiline': {
           height: '100%',
-          "&.MuiOutlinedInput-root": {
+          '&.MuiOutlinedInput-root': {
             padding: '0 13px 11px 13px',
             letterSpacing: 'normal',
           },
         },
-        "& .MuiOutlinedInput-root.Mui-focused": {
+        '& .MuiOutlinedInput-root.Mui-focused': {
           border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
           boxSizing: 'border-box',
           boxShadow: `0px 0px 0px 4px ${theme.palette.apes.purplePleasure.light}`,
-          borderRadius: '12px'
+          borderRadius: '12px',
         },
         '& input[type=search] ~ .MuiInputAdornment-root': {
-          background: 'transparent'
+          background: 'transparent',
         },
-        "& .MuiOutlinedInput-root": {
-
+        '& .MuiOutlinedInput-root': {
           '&:hover': {
             border: `2px solid ${theme.palette.apes.purplePleasure.main}`,
-            "& .MuiInputAdornment-root": {
+            '& .MuiInputAdornment-root': {
               '& *': {
                 // color: theme.palette.apes.purplePleasure.main,
               },
-            }
+            },
           },
         },
-        "& .MuiOutlinedInput-root.Mui-disabled": {
+        '& .MuiOutlinedInput-root.Mui-disabled': {
           border: `2px solid ${theme.palette.apes.bleachedSilk}`,
           '&:hover': {
             border: `2px solid ${theme.palette.apes.bleachedSilk}`,
           },
         },
-        "& .MuiOutlinedInput-root.Mui-error": {
+        '& .MuiOutlinedInput-root.Mui-error': {
           border: `2px solid ${theme.palette.apes.creamyCoral.main}`,
           '&:hover': {
             border: `2px solid ${theme.palette.apes.creamyCoral.main}`,
@@ -251,15 +248,14 @@ const components: Components<Theme> = {
             border: `2px solid ${theme.palette.apes.creamyCoral.main}`,
             boxSizing: 'border-box',
             boxShadow: `0px 0px 0px 4px rgba(226, 119, 138, 0.16)`,
-            borderRadius: '12px'
+            borderRadius: '12px',
           },
         },
-      })
-    }
+      }),
+    },
   },
   MuiInputAdornment: {
     styleOverrides: {
-
       positionStart: ({ theme }: { theme: Theme }) => ({
         borderTopLeftRadius: '12px',
         borderBottomLeftRadius: '12px',
@@ -285,12 +281,12 @@ const components: Components<Theme> = {
         padding: '24px 12px',
         marginRight: '-14px',
         color: theme.palette.apes.argent,
-        letterSpacing: 'normal'
-      })
-    }
+        letterSpacing: 'normal',
+      }),
+    },
   },
   MuiSnackbar,
-  MuiAlert
-}
+  MuiAlert,
+};
 
-export default components
+export default components;

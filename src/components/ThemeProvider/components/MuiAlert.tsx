@@ -1,20 +1,20 @@
-import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from "@mui/material"
+import React from 'react';
+import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material';
 import { CheckCircle, Info, WarningCircle } from 'phosphor-react';
-
 
 declare module '@mui/material/Alert' {
   export interface AlertPropsVariantOverrides {
-    standard: false
-    filled: false
-    outlined: false
-    info: false
+    standard: false;
+    filled: false;
+    outlined: false;
+    info: false;
   }
 
   export interface AlertPropsColorOverrides {
-    info: true
-    success: true
-    warning: true
-    error: false
+    info: true;
+    success: true;
+    warning: true;
+    error: false;
   }
 }
 
@@ -25,8 +25,8 @@ const MuiAlert: {
 } = {
   defaultProps: {
     iconMapping: {
-      success: <CheckCircle size={20} weight="fill" />,
-      warning: <WarningCircle size={20} weight="fill" />,
+      success: <CheckCircle size={20} weight='fill' />,
+      warning: <WarningCircle size={20} weight='fill' />,
       info: <Info size={20} weight={'fill'} />,
     },
   },
@@ -35,7 +35,7 @@ const MuiAlert: {
       props: { severity: 'success' },
       style: ({ theme }: { theme: Theme }) => ({
         '& .MuiAlert-icon': {
-          color: `${theme.palette.apes.serengetiGreen} !important`
+          color: `${theme.palette.apes.serengetiGreen} !important`,
         },
       }),
     },
@@ -43,16 +43,16 @@ const MuiAlert: {
       props: { severity: 'info' },
       style: ({ theme }: { theme: Theme }) => ({
         '& .MuiAlert-icon': {
-          color: `${theme.palette.apes.purplePleasure.main} !important`
-        }
+          color: `${theme.palette.apes.purplePleasure.main} !important`,
+        },
       }),
     },
     {
       props: { severity: 'warning' },
       style: ({ theme }: { theme: Theme }) => ({
         '& .MuiAlert-icon': {
-          color: `${theme.palette.apes.creamyCoral.main} !important`
-        }
+          color: `${theme.palette.apes.creamyCoral.main} !important`,
+        },
       }),
     },
   ],
@@ -89,17 +89,17 @@ const MuiAlert: {
 
       '&:hover': {
         '& .MuiSvgIcon-root': {
-          color: theme.palette.apes.purplePleasure.main
-        }
+          color: theme.palette.apes.purplePleasure.main,
+        },
       },
 
       '& .MuiIconButton-root': {
         border: 'none',
         '&:focus': {
           border: 'none',
-          boxShadow: 'none'
-        }
-      }
+          boxShadow: 'none',
+        },
+      },
     }),
     message: ({ theme }: { theme: Theme }) => ({
       color: theme.palette.apes.offBlack,
@@ -111,9 +111,9 @@ const MuiAlert: {
       '-webkit-box-orient': 'vertical',
     }),
     icon: {
-      marginRight: 17
-    }
-  }
-}
+      marginRight: 17,
+    },
+  },
+};
 
-export default MuiAlert
+export default MuiAlert;

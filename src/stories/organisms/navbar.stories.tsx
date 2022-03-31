@@ -22,36 +22,37 @@ export default {
 } as ComponentMeta<typeof AppBar>;
 
 export const Apes: ComponentStory<typeof AppBar> = () => {
-
   const [value, setValue] = React.useState('/dashboard');
 
   const handleChange = (_: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
 
-  const menus = useMemo(() => [
-    {
-      label: 'Storybook',
-      href: '/iframe.html'
-    },
-    {
-      label: 'Dashboard',
-      href: '/dashboard'
-    },
-    {
-      label: "Lists You've Joined",
-      href: '/joined-list'
-    }
-  ], [])
-
+  const menus = useMemo(
+    () => [
+      {
+        label: 'Storybook',
+        href: '/iframe.html',
+      },
+      {
+        label: 'Dashboard',
+        href: '/dashboard',
+      },
+      {
+        label: "Lists You've Joined",
+        href: '/joined-list',
+      },
+    ],
+    []
+  );
 
   return (
     <NavBar value={value}>
       <TabList onChange={handleChange} sx={{ height: '100%' }}>
-        {menus.map(menu => (
+        {menus.map((menu) => (
           <Tab disableRipple key={menu.label} label={menu.label} value={menu.href} />
         ))}
       </TabList>
     </NavBar>
-  )
-}
+  );
+};

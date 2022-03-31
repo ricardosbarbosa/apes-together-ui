@@ -1,6 +1,22 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Dialog, Box, Button, DialogActions, DialogContent, DialogContentText, DialogProps, DialogTitle, FormControl, FormControlLabel, InputLabel, MenuItem, Select, SelectChangeEvent, Switch } from '@mui/material';
+import {
+  Dialog,
+  Box,
+  Button,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogProps,
+  DialogTitle,
+  FormControl,
+  FormControlLabel,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+  Switch,
+} from '@mui/material';
 import ThemeProvider from '../../../components/ThemeProvider/ThemeProvider';
 
 export default {
@@ -19,8 +35,6 @@ export default {
   ],
 } as ComponentMeta<typeof Dialog>;
 
-
-
 export const Template: ComponentStory<typeof Dialog> = () => {
   const [open, setOpen] = React.useState(false);
   const [fullWidth, setFullWidth] = React.useState(true);
@@ -37,7 +51,7 @@ export const Template: ComponentStory<typeof Dialog> = () => {
   const handleMaxWidthChange = (event: SelectChangeEvent<typeof maxWidth>) => {
     setMaxWidth(
       // @ts-expect-error autofill of arbitrary value is not handled.
-      event.target.value,
+      event.target.value
     );
   };
 
@@ -47,15 +61,10 @@ export const Template: ComponentStory<typeof Dialog> = () => {
 
   return (
     <React.Fragment>
-      <Button variant="secondary" onClick={handleClickOpen}>
+      <Button variant='secondary' onClick={handleClickOpen}>
         Open max-width dialog
       </Button>
-      <Dialog
-        fullWidth={fullWidth}
-        maxWidth={maxWidth}
-        open={open}
-        onClose={handleClose}
-      >
+      <Dialog fullWidth={fullWidth} maxWidth={maxWidth} open={open} onClose={handleClose}>
         <DialogTitle>Optional sizes</DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -63,7 +72,7 @@ export const Template: ComponentStory<typeof Dialog> = () => {
           </DialogContentText>
           <Box
             noValidate
-            component="form"
+            component='form'
             sx={{
               display: 'flex',
               flexDirection: 'column',
@@ -72,31 +81,29 @@ export const Template: ComponentStory<typeof Dialog> = () => {
             }}
           >
             <FormControl sx={{ mt: 2, minWidth: 120 }}>
-              <InputLabel htmlFor="max-width">maxWidth</InputLabel>
+              <InputLabel htmlFor='max-width'>maxWidth</InputLabel>
               <Select
                 autoFocus
                 value={maxWidth}
                 onChange={handleMaxWidthChange}
-                label="maxWidth"
+                label='maxWidth'
                 inputProps={{
                   name: 'max-width',
                   id: 'max-width',
                 }}
               >
                 <MenuItem value={false as any}>false</MenuItem>
-                <MenuItem value="xs">xs</MenuItem>
-                <MenuItem value="sm">sm</MenuItem>
-                <MenuItem value="md">md</MenuItem>
-                <MenuItem value="lg">lg</MenuItem>
-                <MenuItem value="xl">xl</MenuItem>
+                <MenuItem value='xs'>xs</MenuItem>
+                <MenuItem value='sm'>sm</MenuItem>
+                <MenuItem value='md'>md</MenuItem>
+                <MenuItem value='lg'>lg</MenuItem>
+                <MenuItem value='xl'>xl</MenuItem>
               </Select>
             </FormControl>
             <FormControlLabel
               sx={{ mt: 1 }}
-              control={
-                <Switch checked={fullWidth} onChange={handleFullWidthChange} />
-              }
-              label="Full width"
+              control={<Switch checked={fullWidth} onChange={handleFullWidthChange} />}
+              label='Full width'
             />
           </Box>
         </DialogContent>
@@ -106,4 +113,4 @@ export const Template: ComponentStory<typeof Dialog> = () => {
       </Dialog>
     </React.Fragment>
   );
-}
+};

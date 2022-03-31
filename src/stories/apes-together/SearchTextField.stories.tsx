@@ -1,3 +1,4 @@
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TextField, Stack } from '@mui/material';
 import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
@@ -19,10 +20,14 @@ export default {
 } as ComponentMeta<typeof TextField>;
 
 export const Template: ComponentStory<typeof TextField> = () => {
-  const [value, setValue] = useState("controlled input search")
+  const [value, setValue] = useState('controlled input search');
   return (
     <Stack direction={'column'} spacing={2}>
-      <SearchTextField placeholder='Placeholder' value={value} onChange={(e) => setValue(e.target.value)} />
+      <SearchTextField
+        placeholder='Placeholder'
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
     </Stack>
-  )
-}
+  );
+};

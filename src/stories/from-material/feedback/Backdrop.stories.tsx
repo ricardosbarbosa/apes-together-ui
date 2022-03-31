@@ -19,8 +19,6 @@ export default {
   ],
 } as ComponentMeta<typeof Backdrop>;
 
-
-
 export const Template: ComponentStory<typeof Backdrop> = () => {
   const [open, setOpen] = React.useState(false);
   const handleClose = () => {
@@ -38,8 +36,8 @@ export const Template: ComponentStory<typeof Backdrop> = () => {
         open={open}
         onClick={handleClose}
       >
-        <CircularProgress color="inherit" />
+        <CircularProgress color='inherit' />
       </Backdrop>
     </Stack>
   );
-}
+};

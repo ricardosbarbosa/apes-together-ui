@@ -1,11 +1,11 @@
-
+import React from "react";
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
 
-import typography from './typography'
-import shape from './shape'
-import palette from './palette'
-import components from './components/components'
+import typography from './typography';
+import shape from './shape';
+import palette from './palette';
+import components from './components/components';
 declare module '@mui/material/styles' {
   interface Palette {
     apes: {
@@ -18,7 +18,7 @@ declare module '@mui/material/styles' {
       kinglyCloud: React.CSSProperties['color'];
       bleachedSilk: React.CSSProperties['color'];
       white: React.CSSProperties['color'];
-    }
+    };
   }
   interface PaletteOptions {
     apes: {
@@ -31,7 +31,7 @@ declare module '@mui/material/styles' {
       kinglyCloud: React.CSSProperties['color'];
       bleachedSilk: React.CSSProperties['color'];
       white: React.CSSProperties['color'];
-    }
+    };
   }
 }
 
@@ -42,10 +42,9 @@ declare module '@mui/material/Button' {
     warning: true;
     outlined: false;
     contained: false;
-    text: false
+    text: false;
   }
 }
-
 
 // const theme = createTheme(deepmerge(shape, direction, pallete, typography));
 const theme = createTheme({
@@ -53,16 +52,16 @@ const theme = createTheme({
   direction: 'rtl',
   palette,
   typography,
-  components
+  components,
 });
 
-type Props = {}
+type Props = Record<string, unknown>;
 
 export default function ThemeProvider({ children }: React.PropsWithChildren<Props>) {
   return (
-    <MuiThemeProvider theme={theme} >
+    <MuiThemeProvider theme={theme}>
       <CssBaseline />
       {children}
-    </MuiThemeProvider >
-  )
+    </MuiThemeProvider>
+  );
 }

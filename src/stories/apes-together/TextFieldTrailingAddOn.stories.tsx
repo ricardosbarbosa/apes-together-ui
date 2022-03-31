@@ -1,3 +1,4 @@
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TextField, Stack, InputAdornment } from '@mui/material';
 import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
@@ -19,28 +20,47 @@ export default {
 
 export const TextFieldTrailingAddOn: ComponentStory<typeof TextField> = () => {
   return (
-    <Stack direction={'column'} spacing={5} alignItems="flex-start">
-      <TextField defaultValue={"Input"}
+    <Stack direction={'column'} spacing={5} alignItems='flex-start'>
+      <TextField
+        defaultValue={'Input'}
         InputProps={{
-          endAdornment: <InputAdornment position="end"><Clock size={20} /></InputAdornment>
+          endAdornment: (
+            <InputAdornment position='end'>
+              <Clock size={20} />
+            </InputAdornment>
+          ),
         }}
       />
-      <TextField placeholder='Placeholder'
+      <TextField
+        placeholder='Placeholder'
         InputProps={{
-          endAdornment: <InputAdornment position="end"><Clock size={20} /></InputAdornment>
+          endAdornment: (
+            <InputAdornment position='end'>
+              <Clock size={20} />
+            </InputAdornment>
+          ),
         }}
       />
-      <TextField defaultValue={"Hover"}
+      <TextField
+        defaultValue={'Hover'}
         InputProps={{
-          endAdornment: <InputAdornment position="end"><Clock size={20} /></InputAdornment>
+          endAdornment: (
+            <InputAdornment position='end'>
+              <Clock size={20} />
+            </InputAdornment>
+          ),
         }}
       />
-      <TextField defaultValue={"Focus"}
+      <TextField
+        defaultValue={'Focus'}
         InputProps={{
-          endAdornment: <InputAdornment position="end"><Clock size={20} /></InputAdornment>
+          endAdornment: (
+            <InputAdornment position='end'>
+              <Clock size={20} />
+            </InputAdornment>
+          ),
         }}
       />
-
     </Stack>
-  )
-}
+  );
+};

@@ -20,14 +20,10 @@ export default {
   ],
 } as ComponentMeta<typeof ToggleButtonGroup>;
 
-
 export const Template: ComponentStory<typeof ToggleButtonGroup> = () => {
   const [alignment, setAlignment] = React.useState<string | null>('left');
 
-  const handleAlignment = (
-    _: React.MouseEvent<HTMLElement>,
-    newAlignment: string | null,
-  ) => {
+  const handleAlignment = (_: React.MouseEvent<HTMLElement>, newAlignment: string | null) => {
     setAlignment(newAlignment);
   };
 
@@ -36,20 +32,20 @@ export const Template: ComponentStory<typeof ToggleButtonGroup> = () => {
       value={alignment}
       exclusive
       onChange={handleAlignment}
-      aria-label="text alignment"
+      aria-label='text alignment'
     >
-      <ToggleButton value="left" aria-label="left aligned">
+      <ToggleButton value='left' aria-label='left aligned'>
         <TextAlignLeft />
       </ToggleButton>
-      <ToggleButton value="center" aria-label="centered">
+      <ToggleButton value='center' aria-label='centered'>
         <TextAlignCenter />
       </ToggleButton>
-      <ToggleButton value="right" aria-label="right aligned">
+      <ToggleButton value='right' aria-label='right aligned'>
         <TextAlignRight />
       </ToggleButton>
-      <ToggleButton value="justify" aria-label="justified" disabled>
+      <ToggleButton value='justify' aria-label='justified' disabled>
         <TextAlignJustify />
       </ToggleButton>
     </ToggleButtonGroup>
   );
-}
+};
