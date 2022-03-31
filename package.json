@@ -120,11 +120,8 @@
       "commit-msg": "commitlint -E "
     }
   },
-  "release": {
-    "branches": [
-      "master",
-      "develop",
-      "version-0.0.35"
-    ]
-  }
+  
+  "files": [
+    "/dist"
+  ]
 }
