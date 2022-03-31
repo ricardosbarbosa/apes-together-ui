@@ -1,3 +1,4 @@
+import React from 'react';
 import ThemeProvider from '../../../components/ThemeProvider/ThemeProvider';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -131,7 +132,6 @@ const top100Films = [
   { label: 'Monty Python and the Holy Grail', year: 1975 },
 ];
 
-
 export default {
   title: 'Others/inputs/Autocomplete',
   component: Autocomplete,
@@ -148,13 +148,12 @@ export default {
   ],
 } as ComponentMeta<typeof Autocomplete>;
 
-
 export const Template: ComponentStory<typeof Autocomplete> = () => (
   <Autocomplete
     disablePortal
-    id="combo-box-demo"
+    id='combo-box-demo'
     options={top100Films}
     sx={{ width: 300 }}
-    renderInput={(params) => <TextField {...params} label="Movie" />}
+    renderInput={(params) => <TextField {...params} label='Movie' />}
   />
 );

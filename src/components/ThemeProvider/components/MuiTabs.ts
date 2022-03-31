@@ -1,4 +1,4 @@
-import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from "@mui/material"
+import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material';
 
 export const MuiTabs: {
   defaultProps?: ComponentsProps['MuiTabs'];
@@ -13,11 +13,9 @@ export const MuiTabs: {
     root: {
       boxShadow: `inset 0px -2px 0px 0px #f2f2f2`,
     },
-    indicator: {
-      
-    }
-  }
-}
+    indicator: {},
+  },
+};
 
 export const MuiTab: {
   defaultProps?: ComponentsProps['MuiTab'];
@@ -27,7 +25,7 @@ export const MuiTab: {
   defaultProps: {
     disableRipple: true,
     disableTouchRipple: true,
-    disableFocusRipple: true
+    disableFocusRipple: true,
   },
   styleOverrides: {
     root: ({ theme }: { theme: Theme }) => ({
@@ -42,6 +40,6 @@ export const MuiTab: {
       marginRight: '24px',
       padding: '16.5px 0',
       minWidth: 0,
-    })
-  }
-}
+    }),
+  },
+};

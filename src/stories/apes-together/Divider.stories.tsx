@@ -1,8 +1,7 @@
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Divider } from '@mui/material';
 import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
-
-
 
 export default {
   title: 'Components/Divider',
@@ -20,8 +19,7 @@ export default {
   ],
 } as ComponentMeta<typeof Divider>;
 
-
 const Template: ComponentStory<typeof Divider> = () => <Divider />;
-Template.args = {}
+Template.args = {};
 
 export const Thin = Template.bind({});

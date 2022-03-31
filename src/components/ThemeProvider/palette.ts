@@ -1,16 +1,16 @@
-import { PaletteOptions } from "@mui/material"
+import { PaletteOptions } from '@mui/material';
 
 const palette: PaletteOptions = {
   apes: {
     purplePleasure: {
       main: '#7E4A9B',
       light: 'rgba(126, 74, 155, 0.12)',
-      dark: '#612B80'
+      dark: '#612B80',
     },
     creamyCoral: {
       main: '#E2778A',
       light: 'rgba(226, 119, 138, 0.16)',
-      dark: '#CB6678'
+      dark: '#CB6678',
     },
     serengetiGreen: '#78CB8F',
     offBlack: '#303030',
@@ -25,12 +25,12 @@ const palette: PaletteOptions = {
   secondary: { main: '#7E4A9B' },
   success: {
     main: '#78CB8F',
-    contrastText: "#ffffff"
+    contrastText: '#ffffff',
   },
   error: {
     main: '#E2778A',
-    contrastText: "#ffffff"
-  }
-}
+    contrastText: '#ffffff',
+  },
+};
 
-export default palette
+export default palette;

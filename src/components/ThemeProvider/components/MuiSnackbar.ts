@@ -1,9 +1,7 @@
-import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from "@mui/material"
+import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material';
 
 declare module '@mui/material/Snackbar' {
-  interface SnackbarPropsVariantOverrides {
-    
-  }
+  interface SnackbarPropsVariantOverrides {}
 }
 
 const MuiSnackbar: {
@@ -13,9 +11,9 @@ const MuiSnackbar: {
 } = {
   styleOverrides: {
     root: () => ({
-        margin: "0 !important"
-    })
-  }
-}
-  
-export default MuiSnackbar
+      margin: '0 !important',
+    }),
+  },
+};
+
+export default MuiSnackbar;

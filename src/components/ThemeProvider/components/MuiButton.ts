@@ -1,4 +1,4 @@
-import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from "@mui/material"
+import { ComponentsOverrides, ComponentsProps, ComponentsVariants, Theme } from '@mui/material';
 
 const MuiButton: {
   defaultProps?: ComponentsProps['MuiButton'];
@@ -62,7 +62,7 @@ const MuiButton: {
           background: theme.palette.apes.white,
           '& .MuiButton-startIcon,.MuiButton-endIcon': {
             color: theme.palette.apes.purplePleasure.main,
-          }
+          },
         },
         '&:focus': {
           color: theme.palette.apes.offBlack,
@@ -72,7 +72,7 @@ const MuiButton: {
           boxShadow: `0px 0px 0px 4px ${theme.palette.apes.purplePleasure.light}`,
           '& .MuiButton-startIcon,.MuiButton-endIcon': {
             color: theme.palette.apes.purplePleasure.main,
-          }
+          },
         },
         '&:disabled': {
           color: theme.palette.apes.offBlack,
@@ -81,8 +81,8 @@ const MuiButton: {
           opacity: 0.6,
           '& .MuiButton-startIcon,.MuiButton-endIcon': {
             color: theme.palette.apes.palladium,
-          }
-        }
+          },
+        },
       }),
     },
     {
@@ -125,7 +125,7 @@ const MuiButton: {
 
   styleOverrides: {
     root: () => {
-      return ({
+      return {
         textTransform: 'none',
         letterSpacing: 'normal',
         fontFamily: 'aktiv-grotesk, sans-serif !important',
@@ -137,18 +137,18 @@ const MuiButton: {
         height: '52px',
         maxWidth: '256px',
         minWidth: '256px',
-        transition: '0.3s'
-      })
+        transition: '0.3s',
+      };
     },
     sizeMedium: {
       fontSize: '13px',
-      height: '52px'
+      height: '52px',
     },
     sizeSmall: {
       fontSize: '13px',
-      height: '44px'
+      height: '44px',
     },
   },
-}
-  
-export default MuiButton
+};
+
+export default MuiButton;

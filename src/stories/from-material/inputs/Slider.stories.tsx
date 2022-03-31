@@ -20,7 +20,6 @@ export default {
   ],
 } as ComponentMeta<typeof Slider>;
 
-
 export const Template: ComponentStory<typeof Slider> = () => {
   const [value, setValue] = React.useState<number>(30);
 
@@ -30,12 +29,12 @@ export const Template: ComponentStory<typeof Slider> = () => {
 
   return (
     <Box sx={{ width: 200 }}>
-      <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+      <Stack spacing={2} direction='row' sx={{ mb: 1 }} alignItems='center'>
         <SpeakerLow />
-        <Slider aria-label="Volume" value={value} onChange={handleChange} />
+        <Slider aria-label='Volume' value={value} onChange={handleChange} />
         <SpeakerHigh />
       </Stack>
-      <Slider disabled defaultValue={30} aria-label="Disabled slider" />
+      <Slider disabled defaultValue={30} aria-label='Disabled slider' />
     </Box>
   );
-}
+};

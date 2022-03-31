@@ -1,5 +1,9 @@
+import React from "react";
 import { styled } from '@mui/system';
-import SwitchUnstyled, { switchUnstyledClasses, SwitchUnstyledProps } from '@mui/base/SwitchUnstyled';
+import SwitchUnstyled, {
+  switchUnstyledClasses,
+  SwitchUnstyledProps,
+} from '@mui/base/SwitchUnstyled';
 import { CSSProperties } from 'react';
 
 const green = {
@@ -112,12 +116,10 @@ const Root = styled('span')(
     z-index: 1;
     margin: 0;
   }
-  `,
+  `
 );
 
-export type SwitchProps = SwitchUnstyledProps & { style?: CSSProperties | undefined }
+export type SwitchProps = SwitchUnstyledProps & { style?: CSSProperties | undefined };
 export default function Switch(props: SwitchProps) {
-  return (
-    <SwitchUnstyled component={Root} {...props} />
-  );
+  return <SwitchUnstyled component={Root} {...props} />;
 }

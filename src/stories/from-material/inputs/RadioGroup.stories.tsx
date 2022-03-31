@@ -20,10 +20,6 @@ export default {
   ],
 } as ComponentMeta<typeof RadioGroup>;
 
-
-
-
-
 export const Template: ComponentStory<typeof RadioGroup> = () => {
   const [selectedValue, setSelectedValue] = React.useState('a');
 
@@ -41,40 +37,35 @@ export const Template: ComponentStory<typeof RadioGroup> = () => {
   return (
     <Stack direction='column' spacing={2} alignItems='center'>
       <FormControl>
-        <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+        <FormLabel id='demo-radio-buttons-group-label'>Gender</FormLabel>
         <RadioGroup
-          aria-labelledby="demo-radio-buttons-group-label"
-          defaultValue="female"
-          name="radio-buttons-group"
+          aria-labelledby='demo-radio-buttons-group-label'
+          defaultValue='female'
+          name='radio-buttons-group'
         >
-          <FormControlLabel value="female" control={<Radio />} label="Female" />
-          <FormControlLabel value="male" control={<Radio />} label="Male" />
-          <FormControlLabel value="other" control={<Radio />} label="Other" />
+          <FormControlLabel value='female' control={<Radio />} label='Female' />
+          <FormControlLabel value='male' control={<Radio />} label='Male' />
+          <FormControlLabel value='other' control={<Radio />} label='Other' />
         </RadioGroup>
       </FormControl>
       <FormControl>
-        <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
+        <FormLabel id='demo-row-radio-buttons-group-label'>Gender</FormLabel>
         <RadioGroup
           row
-          aria-labelledby="demo-row-radio-buttons-group-label"
-          name="row-radio-buttons-group"
+          aria-labelledby='demo-row-radio-buttons-group-label'
+          name='row-radio-buttons-group'
         >
-          <FormControlLabel value="female" control={<Radio />} label="Female" />
-          <FormControlLabel value="male" control={<Radio />} label="Male" />
-          <FormControlLabel value="other" control={<Radio />} label="Other" />
-          <FormControlLabel
-            value="disabled"
-            disabled
-            control={<Radio />}
-            label="other"
-          />
+          <FormControlLabel value='female' control={<Radio />} label='Female' />
+          <FormControlLabel value='male' control={<Radio />} label='Male' />
+          <FormControlLabel value='other' control={<Radio />} label='Other' />
+          <FormControlLabel value='disabled' disabled control={<Radio />} label='other' />
         </RadioGroup>
       </FormControl>
-      <Stack spacing='2' direction={'row'} >
+      <Stack spacing='2' direction={'row'}>
         <Radio {...controlProps('a')} />
-        <Radio {...controlProps('b')} color="secondary" />
-        <Radio {...controlProps('c')} color="success" />
-        <Radio {...controlProps('d')} color="default" />
+        <Radio {...controlProps('b')} color='secondary' />
+        <Radio {...controlProps('c')} color='success' />
+        <Radio {...controlProps('d')} color='default' />
         <Radio
           {...controlProps('e')}
           sx={{
@@ -86,7 +77,7 @@ export const Template: ComponentStory<typeof RadioGroup> = () => {
         />
       </Stack>
       <Stack direction={'row'} spacing='2'>
-        <Radio {...controlProps('a')} size="small" />
+        <Radio {...controlProps('a')} size='small' />
         <Radio {...controlProps('b')} />
         <Radio
           {...controlProps('c')}
@@ -97,8 +88,6 @@ export const Template: ComponentStory<typeof RadioGroup> = () => {
           }}
         />
       </Stack>
-
     </Stack>
-
-  )
+  );
 };
