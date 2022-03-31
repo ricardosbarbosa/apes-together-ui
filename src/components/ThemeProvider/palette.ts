@@ -14,7 +14,7 @@ const palette: PaletteOptions = {
     },
     serengetiGreen: '#78CB8F',
     offBlack: '#303030',
-    argent: '#888888',
+    argent: '#757575',
     palladium: '#B1B1B1',
     kinglyCloud: '#DFDFDF',
     bleachedSilk: '#F2F2F2',
