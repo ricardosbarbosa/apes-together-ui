@@ -1,7 +1,5 @@
 export * from './components';
 
-
-export * from "@mui/material"
 export { SpeedDialAction } from "@mui/material"
 export { Alert } from '@mui/material'
 export { AlertTitle } from '@mui/material'
