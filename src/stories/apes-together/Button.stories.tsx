@@ -1,143 +1,124 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Button from '@mui/material/Button';
-
-import ThemeProvider from '../../components/ThemeProvider/ThemeProvider';
-import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ArrowUpRight, CircleNotch, Plus, Trash } from 'phosphor-react';
-import { useTheme } from '@mui/material/styles';
+import { Button } from '../../index';
 
 export default {
   title: 'Components/Button',
-  component: Button,
-
-  argTypes: {},
+  component:  Button,
   decorators: [
     (Story) => (
-      <ThemeProvider>
         <Story />
-      </ThemeProvider>
-    ),
-  ],
+    )
+  ]
 } as ComponentMeta<typeof Button>;
 
-const Playground: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-Playground.args = {
-  children: 'Button',
-};
-
-export const Primary: ComponentStory<typeof Button> = (args) => (
-  <Stack direction={'column'} spacing={5}>
-    <Button {...args} variant='primary'  >Primary</Button>
-    <Button {...args} variant='primary'  >Hover</Button>
-    <Button {...args} variant='primary'  >Focus</Button>
-    <Button {...args} variant='primary' disabled >Disabled</Button>
-  </Stack>
-);
-export const Secondary: ComponentStory<typeof Button> = (args) => (
-  <Stack direction={'column'} spacing={5}>
-    <Button {...args} variant='secondary'  >Secondary</Button>
-    <Button {...args} variant='secondary'  >Hover</Button>
-    <Button {...args} variant='secondary'  >Focus</Button>
-    <Button {...args} variant='secondary' disabled >Secondary</Button>
-  </Stack>
-);
-
-export const Warning: ComponentStory<typeof Button> = (args) => (
-  <Stack direction={'column'} spacing={5}>
-    <Button {...args} variant='warning'  >Warning</Button>
-    <Button {...args} variant='warning'  >Warning</Button>
-    <Button {...args} variant='warning'  >Warning</Button>
-    <Button {...args} variant='warning' disabled >Warning</Button>
-  </Stack>
-);
-export const ButtonSecondaryLeadingIcon: ComponentStory<typeof Button> = (args) => (
-  <Stack direction={'column'} spacing={5}>
-    <Button {...args} variant='secondary' startIcon={<Plus size={20} />} >Secondary</Button>
-    <Button {...args} variant='secondary' startIcon={<Plus size={20} />} >Hover</Button>
-    <Button {...args} variant='secondary' startIcon={<Plus size={20} />} >Focus</Button>
-    <Button
-      {...args}
-      variant='secondary'
-      startIcon={<Plus size={20} />}
-      disabled
-    >
-      Disabled
+export const ButtonPrimary: ComponentStory<typeof Button> = () => (
+  <div className='flex flex-col w-full'>
+    <Button variant='primary'>
+      Primary
     </Button>
-  </Stack>
+    <br />
+    <Button variant='primary' disabled={true}>
+      Primary
+    </Button>
+  </div>
 );
 
-export const ButtonSecondaryTrailingIcon: ComponentStory<typeof Button> = (args) => (
-  <Stack direction={'column'} spacing={5}>
-    <Button
-      {...args}
-      variant='secondary'
-      endIcon={<ArrowUpRight size={20} />}
-    >
+export const ButtonSecondary: ComponentStory<typeof Button> = () => (
+  <div className='flex flex-col w-full'>
+    <Button variant='secondary'>
       Secondary
     </Button>
-    <Button {...args} variant='secondary' endIcon={<ArrowUpRight size={20} />} >Hover</Button>
-    <Button {...args} variant='secondary' endIcon={<ArrowUpRight size={20} />} >Focus</Button>
-    <Button
-      {...args}
-      variant='secondary'
-      endIcon={<ArrowUpRight size={20} />}
-      disabled
-    >Disabled</Button>
-  </Stack>
+    <br />
+    <Button variant='secondary' disabled={true}>
+      Secondary
+    </Button>
+  </div>
 );
 
-export const IconsButtons: ComponentStory<typeof IconButton> = (args) => (
-  <Stack direction={'column'} spacing={5}>
-    <IconButton {...args}  ><Trash size={20} /></IconButton>
-    <IconButton {...args}  ><Trash size={20} /></IconButton>
-    <IconButton {...args}  ><Trash size={20} /></IconButton>
-    <IconButton {...args} disabled ><Trash size={20} /></IconButton>
-  </Stack>
+export const ButtonSecondaryLeading: ComponentStory<typeof Button> = () => (
+  <div className='flex flex-col w-full'>
+    <Button variant='secondary' leading={true} icon={<Plus size={20} />}>
+      Secondary
+    </Button>
+    <br />
+    <Button variant='secondary' leading={true} icon={<Plus size={20} />} disabled={true}>
+      Secondary
+    </Button>
+  </div>
 );
 
-export const LoadingButtons: ComponentStory<typeof Button> = (args) => {
-  const theme = useTheme();
-  return (
-    <Stack direction={'column'} spacing={5}>
-      <Button
-        {...args}
-        variant='primary'
-        disabled
-        startIcon={
-          <CircleNotch size={20}>
-            {/* <WarningCircle size={28}  weight="fill" /> */}
-            <animateTransform
-              attributeName='transform'
-              attributeType='XML'
-              type='rotate'
-              dur='1s'
-              from='0 0 0'
-              to='360 0 0'
-              repeatCount='indefinite'
-            />
-          </CircleNotch>
-        }
-      >Primary</Button>
-      <Button
-        {...args}
-        variant='secondary'
-        disabled
-        startIcon={
-          <CircleNotch size={20} color={theme.palette.apes.serengetiGreen}>
-            <animateTransform
-              attributeName='transform'
-              attributeType='XML'
-              type='rotate'
-              dur='1s'
-              from='0 0 0'
-              to='360 0 0'
-              repeatCount='indefinite'
-            />
-          </CircleNotch>
-        }
-      >Secondary</Button>
-    </Stack>
-  );
-};
+export const ButtonSecondaryTrailing: ComponentStory<typeof Button> = () => (
+  <div className='flex flex-col w-full'>
+    <Button variant='secondary' icon={<ArrowUpRight size={20} />}>
+      Secondary
+    </Button>
+    <br />
+    <Button variant='secondary' icon={<ArrowUpRight size={20} />} disabled={true}>
+      Secondary
+    </Button>
+  </div>
+);
+
+export const ButtonWarning: ComponentStory<typeof Button> = () => (
+  <div className='flex flex-col w-full'>
+    <Button variant='warning'>
+      Secondary
+    </Button>
+  </div>
+);
+
+export const ButtonIcon: ComponentStory<typeof Button> = () => (
+  <div className='flex flex-col w-full'>
+    <Button variant='icon' icon={<Trash size={20} />} />
+    <br />
+    <Button variant='icon' icon={<Trash size={20} />} disabled={true} />
+  </div>
+);
+
+export const ButtonLoading: ComponentStory<typeof Button> = () => (
+  <div className='flex flex-col w-full'>
+    <Button 
+      variant='primary' 
+      icon={
+        <CircleNotch size={20}>
+          <animateTransform
+            attributeName='transform'
+            attributeType='XML'
+            type='rotate'
+            dur='1s'
+            from='0 0 0'
+            to='360 0 0'
+            repeatCount='indefinite'
+          />
+        </CircleNotch>
+      } 
+      disabled={true}
+      leading={true}
+    >
+      Verifying
+    </Button>
+    <br />
+    <Button 
+      variant='secondary' 
+      icon={
+        <CircleNotch size={20}>
+          <animateTransform
+            attributeName='transform'
+            attributeType='XML'
+            type='rotate'
+            dur='1s'
+            from='0 0 0'
+            to='360 0 0'
+            repeatCount='indefinite'
+          />
+        </CircleNotch>
+      } 
+      disabled={true}
+      leading={true}
+    >
+      Loading
+    </Button>
+  </div>
+);
