@@ -1,0 +1,34 @@
+@import url("https://use.typekit.net/vln3ftu.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply font-AktivGrotesk;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button.bg-purple-pleasures:focus,
+button.bg-white:focus {
+    border: 2px solid #7E4A9B;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 4px rgba(126, 74, 155, 0.12);
+}
+
+button.bg-creamy-coral:focus {
+    border: 2px solid #E2778A;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 4px rgba(226, 119, 138, 0.16);
+}
+
+button:hover svg {
+    color: #7E4A9B;
+}
+
+button {
+    font-size: 13px;
+}
